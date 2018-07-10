@@ -11,6 +11,7 @@ public class moveorb : MonoBehaviour {
 		public float horizVel = 0; //In welche Line sich der Orb bewegt
 		public int laneNum = 0; //guckt in welcher Linie sich der Ball befindet & vermeidet überschreitungen vom Feld
 		public string controlLock = "n";
+		public int sternzaehler = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -41,6 +42,10 @@ public class moveorb : MonoBehaviour {
 	void OnCollisionEnter(Collision other){
 		if(other.gameObject.tag == "lethal"){
 			Destroy (gameObject);
+		}
+		if(other.gameObject.name == "Stern"){
+			Destroy(other.gameObject);
+			sternzaehler += 1;
 		}
 	}
 
