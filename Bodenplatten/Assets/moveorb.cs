@@ -12,6 +12,7 @@ public class moveorb : MonoBehaviour {
 		public int laneNum = 0; //guckt in welcher Linie sich der Ball befindet & vermeidet überschreitungen vom Feld
 		public string controlLock = "n";
 		public int sternzaehler = 0;
+        public bool tot = false;
 
 	// Use this for initialization
 	void Start () {
@@ -40,9 +41,12 @@ public class moveorb : MonoBehaviour {
 
 	// Wenn man das Object mit dem Tag lethal trifft wird das männchen zerstört
 	void OnCollisionEnter(Collision other){
-		if(other.gameObject.tag == "lethal"){
-			Destroy (gameObject);
-		}
+		if(other.gameObject.tag == "einbrechen"){
+            tot = true;
+            Destroy(other.gameObject);
+            GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+
+        }
 		if(other.gameObject.name == "Stern"){
 			Destroy(other.gameObject);
 			sternzaehler += 1;
