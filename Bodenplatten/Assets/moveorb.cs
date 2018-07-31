@@ -13,16 +13,19 @@ public class moveorb : MonoBehaviour {
 		public string controlLock = "n";
 		public int sternzaehler = 0;
         public bool tot = false;
+        
+ 
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    // Use this for initialization
+    void Start () {
+        
+    }
 	
 	// Update is called once per frame
 	//Steuerung in Update weil es immer wieder abfragt!
 	void Update () {
-		GetComponent<Rigidbody> ().velocity = new Vector3 (horizVel,0,4);
+
+        GetComponent<Rigidbody> ().velocity = new Vector3 (horizVel,0,4);
 
 		if((Input.GetKeyDown (moveL)) && (laneNum>-2) && (controlLock == "n")){
 			horizVel = -2;
@@ -44,7 +47,9 @@ public class moveorb : MonoBehaviour {
 		if(other.gameObject.tag == "einbrechen"){
             tot = true;
             Destroy(other.gameObject);
-            GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+            
+
+
 
         }
 		if(other.gameObject.name == "Stern"){

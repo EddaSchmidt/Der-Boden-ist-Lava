@@ -6,6 +6,7 @@ TagManager:
   tags:
   - lethal
   - einbrechen
+  - spieler
   layers:
   - Default
   - TransparentFX
