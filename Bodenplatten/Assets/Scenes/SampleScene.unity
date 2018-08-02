@@ -638,7 +638,6 @@ GameObject:
   - component: {fileID: 106304579}
   - component: {fileID: 106304585}
   - component: {fileID: 106304586}
-  - component: {fileID: 106304587}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: spieler
@@ -674,7 +673,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -757,7 +756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad4bf87e89de3314db6395f3a7a2e012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mymoveorb: {fileID: 0}
+  myEinbruch: {fileID: 0}
 --- !u!114 &106304586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -766,6 +765,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 106304578}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: c3eb71307bb48794abd66e1a50e1a43f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -778,8 +778,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ade1e8a24f606a46a0cc3274bd44f8d, type: 3}
+=======
+  m_Script: {fileID: 11500000, guid: e71156582ed72344fb6924aee6d43768, type: 3}
+>>>>>>> a46dd1b8fff3f6e252adef5d1c5858742239b519
   m_Name: 
   m_EditorClassIdentifier: 
+  eingebrochen: 0
 --- !u!1 &122131401
 GameObject:
   m_ObjectHideFlags: 0
@@ -1624,7 +1628,6 @@ GameObject:
   - component: {fileID: 282840811}
   - component: {fileID: 282840815}
   - component: {fileID: 282840812}
-  - component: {fileID: 282840816}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1650,7 +1653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad4bf87e89de3314db6395f3a7a2e012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mymoveorb: {fileID: 106304579}
+  myEinbruch: {fileID: 1398246389}
 --- !u!20 &282840813
 Camera:
   m_ObjectHideFlags: 0
@@ -1719,6 +1722,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+<<<<<<< HEAD
 --- !u!114 &282840816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1730,6 +1734,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3eb71307bb48794abd66e1a50e1a43f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+>>>>>>> a46dd1b8fff3f6e252adef5d1c5858742239b519
 --- !u!1 &295331573
 GameObject:
   m_ObjectHideFlags: 0
@@ -10297,10 +10303,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
+  m_UseGravity: 1
+  m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &1398246389
 MonoBehaviour:
@@ -10310,9 +10316,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1398246383}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3eb71307bb48794abd66e1a50e1a43f, type: 3}
+  m_Script: {fileID: 11500000, guid: e71156582ed72344fb6924aee6d43768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+=======
+  eingebrochen: 0
+>>>>>>> a46dd1b8fff3f6e252adef5d1c5858742239b519
 --- !u!1 &1404087296
 GameObject:
   m_ObjectHideFlags: 0
