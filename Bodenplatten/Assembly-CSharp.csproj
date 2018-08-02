@@ -55,7 +55,6 @@
   <ItemGroup>
      <Compile Include="Assets\CameraMov.cs" />
      <Compile Include="Assets\effects.cs" />
-     <Compile Include="Assets\Einbrechen.cs" />
      <Compile Include="Assets\ExitOnClick.cs" />
      <Compile Include="Assets\moveorb.cs" />
  <Reference Include="UnityEditor.StandardEvents">

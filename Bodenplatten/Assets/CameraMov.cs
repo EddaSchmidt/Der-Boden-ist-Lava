@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraMov : MonoBehaviour {
 
-    public Einbrechen myEinbruch; 
+    public moveorb mymoveorb; 
 
 	// Use this for initialization
 	void Start () {
@@ -14,7 +14,7 @@ public class CameraMov : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         
-		if (myEinbruch.eingebrochen == true)
+		if (mymoveorb.tot == true)
         {
             GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
         }
