@@ -55,6 +55,7 @@
   <ItemGroup>
      <Compile Include="Assets\02-scripts\CameraMov.cs" />
      <Compile Include="Assets\02-scripts\effects.cs" />
+     <Compile Include="Assets\02-scripts\Einbrechen.cs" />
      <Compile Include="Assets\02-scripts\ExitOnClick.cs" />
      <Compile Include="Assets\02-scripts\MainMenu.cs" />
      <Compile Include="Assets\02-scripts\moveorb.cs" />

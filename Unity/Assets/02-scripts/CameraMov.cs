@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class CameraMov : MonoBehaviour {
 
-    public moveorb mymoveorb; 
+    public Einbrechen myEinbruch;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
+        //Camera Movement
         GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 4);
 	}
 	
 	// Update is called once per frame
 	void Update () {
         
-		if (mymoveorb.tot == true)
+        //wenn Spieler eingebrochen bleibt Camera stehen
+        if (myEinbruch.eingebrochen == true)
         {
             GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
         }
