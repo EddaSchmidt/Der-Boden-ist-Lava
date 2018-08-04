@@ -6,8 +6,7 @@ public class Einbrechen : MonoBehaviour {
 
     private Rigidbody rigidPlatte;
     public bool eingebrochen = false;
-    public GameObject destroyedVersion;
-
+    public GameObject remains;
 
     // Use this for initialization
     void Start()
@@ -18,8 +17,10 @@ public class Einbrechen : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-
+       
     }
+
+
 
     void OnCollisionEnter(Collision col)
     {
@@ -27,8 +28,9 @@ public class Einbrechen : MonoBehaviour {
         {
             rigidPlatte.isKinematic = false;
             eingebrochen = true;
-            //Instantiate(destroyedVersion, transform.position, transform.rotation);
-            
+            //Destroy(gameObject);
+            Instantiate(remains, transform.position, transform.rotation);
+
 
         }
     }
