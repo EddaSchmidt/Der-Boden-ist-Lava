@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/01-Scenes/Spiel_Menue.unity
-=======
-- path: Assets/01-Scenes/ScriptAusweichSceneVonSamuelRiestererErstelltAm05-08-2018DamitGithubNichtWiederRumSpackt.unity
->>>>>>> c564be5fc0e227955a17204886bfa28996037f33
+- path: Assets/01-Scenes/gameover.unity
   isLoaded: 1
   isActive: 1

@@ -1,24 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 public class MainMenu : MonoBehaviour {
 
-    public void startGame() {
-        SceneManager.LoadScene("SampleScene");
-    }
 
-    public void exitGame() {
-        Debug.Log("EXIT");
-        Application.Quit();
-    }
+	public Text highscoreText;
+
 	// Use this for initialization
 	void Start () {
-		
+		highscoreText.text = "Highscore: " + ((int)PlayerPrefs.GetFloat("Highscore")).ToString();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    public void ToGame() {
+        SceneManager.LoadScene("GameScene");
+    }
+
 }
