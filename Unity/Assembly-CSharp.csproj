@@ -51,13 +51,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\02-scripts\CameraMotore.cs" />
      <Compile Include="Assets\02-scripts\CameraMov.cs" />
      <Compile Include="Assets\02-scripts\effects.cs" />
      <Compile Include="Assets\02-scripts\Einbrechen.cs" />
      <Compile Include="Assets\02-scripts\ExitOnClick.cs" />
      <Compile Include="Assets\02-scripts\MainMenu.cs" />
      <Compile Include="Assets\02-scripts\moveorb.cs" />
+     <Compile Include="Assets\02-scripts\PlayerMotor.cs" />
      <Compile Include="Assets\02-scripts\Zerbrechen.cs" />
+<<<<<<< HEAD
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -91,6 +94,10 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+=======
+     <Compile Include="Assets\CameraMotor.cs" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+>>>>>>> e0d05a59e7930d47c0e0b7aaebd326eb478be5d2
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
