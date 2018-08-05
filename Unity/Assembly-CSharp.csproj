@@ -62,7 +62,6 @@
      <Compile Include="Assets\02-scripts\moveorb.cs" />
      <Compile Include="Assets\02-scripts\PlayerMotor.cs" />
      <Compile Include="Assets\02-scripts\Zerbrechen.cs" />
-     <Compile Include="Assets\CameraMotor.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
