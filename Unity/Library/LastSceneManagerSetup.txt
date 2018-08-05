@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/01-Scenes/Spiel.unity
-=======
 - path: Assets/01-Scenes/SampleScene.unity
->>>>>>> d4c70d6dddb3c0c5ccf90269ded31d1cb2db5db9
   isLoaded: 1
   isActive: 1
