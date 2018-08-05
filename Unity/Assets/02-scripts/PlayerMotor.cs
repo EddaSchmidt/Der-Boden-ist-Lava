@@ -12,13 +12,28 @@ public class PlayerMotor : MonoBehaviour {
 
     private float speed = 5.0f; // Schnelligkeit festelgen auf 5m pro sekunde
 
+    private float animationDuration = 3.0f;
+    private float startTime;
+
+    private bool isDead = false;
+
 	// Use this for initialization
 	void Start () {
         controller = GetComponent<CharacterController>();
+        startTime = Time.time;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+        if (isDead)
+            return;
+
+        if (Time.time - startTime < animationDuration) {
+            controller.Move (Vector3.forward * speed * Time.deltaTime);
+            return;
+        }
+
         moveVector = Vector3.zero;
 
         if (controller.isGrounded) // wenn Spieler auf Boden ist
