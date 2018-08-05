@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 392}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -42,14 +42,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 681, y: 342}
-  m_MaxSize: {x: 12006, y: 8042}
+  m_MinSize: {x: 683, y: 492}
+  m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-<<<<<<< HEAD
   controlID: 9
-=======
-  controlID: 109
->>>>>>> 2b251e86e5b687a7627bf703265283efbe070e83
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -66,13 +62,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1531
     y: 0
-<<<<<<< HEAD
     width: 389
     height: 947
-=======
-    width: 277
-    height: 587
->>>>>>> 2b251e86e5b687a7627bf703265283efbe070e83
   m_MinSize: {x: 277, y: 71}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
@@ -97,9 +88,9 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 379
-    height: 676
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+    height: 573
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -120,17 +111,17 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 676
+    y: 573
     width: 1531
-    height: 271
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 18}
+    height: 374
+  m_MinSize: {x: 232, y: 271}
+  m_MaxSize: {x: 10002, y: 10021}
+  m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
   - {fileID: 18}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -152,7 +143,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 392}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -215,14 +206,10 @@ MonoBehaviour:
     y: 0
     width: 1531
     height: 947
-  m_MinSize: {x: 404, y: 342}
-  m_MaxSize: {x: 8004, y: 8042}
+  m_MinSize: {x: 406, y: 492}
+  m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-<<<<<<< HEAD
-  controlID: 10
-=======
-  controlID: 110
->>>>>>> 2b251e86e5b687a7627bf703265283efbe070e83
+  controlID: 63
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -241,21 +228,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
     width: 1531
-    height: 676
-  m_MinSize: {x: 404, y: 221}
-  m_MaxSize: {x: 8004, y: 4021}
-  vertical: 0
-  controlID: 11
-=======
-    width: 1003
-    height: 316
+    height: 573
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 111
->>>>>>> 2b251e86e5b687a7627bf703265283efbe070e83
+  controlID: 64
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -272,13 +250,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 379
     y: 0
-<<<<<<< HEAD
     width: 1152
-    height: 676
-=======
-    width: 755
-    height: 316
->>>>>>> 2b251e86e5b687a7627bf703265283efbe070e83
+    height: 573
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 16}
@@ -334,9 +307,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 768
+    y: 665
     width: 1529
-    height: 250
+    height: 353
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -350,37 +323,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-<<<<<<< HEAD
-    - Packages/com.unity.textmeshpro
-  m_ViewMode: 1
-  m_StartGridSize: 64
-  m_LastFolders:
-  - Packages/com.unity.textmeshpro
-  m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\samue\Desktop\git\Der-Boden-ist-Lava\Unity
-  m_LockTracker:
-    m_IsLocked: 0
-  m_FolderTreeState:
-    scrollPos: {x: 0, y: 43}
-    m_SelectedIDs: 0c2d0000
-    m_LastClickedID: 11532
-    m_ExpandedIDs: 00000000922c0000642d00007c2d0000402e0000362f0000383400003a3400003c3400003e3400004034000000ca9a3bffffff7f
-=======
     - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
   - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Edda Schmidt\Documents\GitHub\Der-Boden-ist-Lava\Unity
+  m_LastProjectPath: C:\Users\samue\Desktop\git\Der-Boden-ist-Lava\Unity
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 46310000
-    m_LastClickedID: 12614
-    m_ExpandedIDs: 00000000463100009c3100002c32000048320000a83200004433000068330000ae3400006835000000ca9a3b
->>>>>>> 2b251e86e5b687a7627bf703265283efbe070e83
+    m_SelectedIDs: 202a0000
+    m_LastClickedID: 10784
+    m_ExpandedIDs: 00000000202a0000f62a00000e2b0000d22b0000d02c0000ee310000f0310000f2310000f4310000f631000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -408,11 +364,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-<<<<<<< HEAD
-    m_ExpandedIDs: 00000000922c0000642d00007c2d0000402e0000362f0000383400003a3400003c3400003e34000040340000
-=======
-    m_ExpandedIDs: 00000000463100009c3100002c32000048320000a83200004433000068330000ae34000068350000
->>>>>>> 2b251e86e5b687a7627bf703265283efbe070e83
+    m_ExpandedIDs: 00000000202a0000f62a00000e2b0000d22b0000d02c0000ee310000f0310000f2310000f4310000f6310000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -524,17 +476,13 @@ MonoBehaviour:
     x: 0
     y: 92
     width: 377
-    height: 655
+    height: 552
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-<<<<<<< HEAD
-    m_ExpandedIDs: 6ef8ffff00000000
-=======
-    m_ExpandedIDs: a0eeffff00000000
->>>>>>> 2b251e86e5b687a7627bf703265283efbe070e83
+    m_ExpandedIDs: 0af7ffffe6fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -553,7 +501,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 0}
     m_SearchString: 
   m_ExpandedScenes:
-  - Spiel
+  - ScriptAusweichSceneVonSamuelRiestererErstelltAm05-08-2018DamitGithubNichtWiederRumSpackt
   m_CurrenRootInstanceID: 0
   m_LockTracker:
     m_IsLocked: 0
@@ -581,7 +529,7 @@ MonoBehaviour:
     x: 381
     y: 92
     width: 1148
-    height: 655
+    height: 552
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
   lastFramingTime: 0
@@ -623,15 +571,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_Size:
-<<<<<<< HEAD
     m_Target: 10
     speed: 2
     m_Value: 10
-=======
-    m_Target: 14.851255
-    speed: 2
-    m_Value: 14.851255
->>>>>>> 2b251e86e5b687a7627bf703265283efbe070e83
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -666,7 +608,7 @@ MonoBehaviour:
     x: 381
     y: 92
     width: 1148
-    height: 655
+    height: 552
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
@@ -680,8 +622,8 @@ MonoBehaviour:
     vZoomLockedByDefault: 0
     m_HBaseRangeMin: -574
     m_HBaseRangeMax: 574
-    m_VBaseRangeMin: -319
-    m_VBaseRangeMax: 319
+    m_VBaseRangeMin: -267.5
+    m_VBaseRangeMax: 267.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -700,9 +642,9 @@ MonoBehaviour:
       x: 0
       y: 17
       width: 1148
-      height: 638
+      height: 535
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 574, y: 319}
+    m_Translation: {x: 574, y: 267.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -710,14 +652,14 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -574
-      y: -319
+      y: -267.5
       width: 1148
-      height: 638
+      height: 535
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 1148, y: 655}
+  m_LastWindowPixelSize: {x: 1148, y: 552}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -743,7 +685,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 768
+    y: 665
     width: 1529
-    height: 250
+    height: 353
   m_PersistentViewDataDictionary: {fileID: 0}
