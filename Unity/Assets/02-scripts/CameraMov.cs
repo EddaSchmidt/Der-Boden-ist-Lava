@@ -9,7 +9,7 @@ public class CameraMov : MonoBehaviour {
     // Use this for initialization
     void Start () {
         //Camera Movement
-        GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 4);
+        GetComponent<Rigidbody>().velocity = new Vector3(0,GM.vertVel, 4*GM.zVelAdj);
 	}
 	
 	// Update is called once per frame

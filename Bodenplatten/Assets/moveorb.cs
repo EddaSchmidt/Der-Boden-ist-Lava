@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,31 +13,16 @@ public class moveorb : MonoBehaviour {
 		public string controlLock = "n";
 		public int sternzaehler = 0;
 
-        Rigidbody rbSpieler;
-        public bool tot = false; //testen ob Spieler noch lebt oder nicht
-        
- 
-
-    // Use this for initialization
-    void Start () {
-        rbSpieler = GetComponent<Rigidbody>(); //Rigidbody von Sphere in rbSpieler speichern
-    }
+	// Use this for initialization
+	void Start () {
+		
+	}
 	
 	// Update is called once per frame
 	//Steuerung in Update weil es immer wieder abfragt!
 	void Update () {
+		GetComponent<Rigidbody> ().velocity = new Vector3 (horizVel,0,4);
 
-        //wenn Spieler eingebrochen/tot dann faellt er runter und laeuft nicht weiter
-        if (tot == false)
-        {
-            GetComponent<Rigidbody>().velocity = new Vector3(horizVel, 0, 4);
-        } else
-        {
-            
-            rbSpieler.useGravity = true;
-        }
-
-        //Steuerung des Spielers mittels Tastatur (nach Links)
 		if((Input.GetKeyDown (moveL)) && (laneNum>-2) && (controlLock == "n")){
 			horizVel = -2;
 			StartCoroutine (stopSlide());
@@ -45,8 +30,7 @@ public class moveorb : MonoBehaviour {
 			controlLock = "y";
 		}
 
-        //Steuerung des Spielers mittels Tastatur (nach Rechts)
-        if ((Input.GetKeyDown (moveR)) && (laneNum<2) && (controlLock == "n")) {
+		if((Input.GetKeyDown (moveR)) && (laneNum<2) && (controlLock == "n")) {
 			horizVel = 2;
 			StartCoroutine (stopSlide());
 			laneNum += 1;
@@ -54,18 +38,14 @@ public class moveorb : MonoBehaviour {
 		}
 	}
 
-	// Wenn man der Spieler ein Obstacle beruehrt dann wir tot auf true gesetzt und der spieler laeuft nicht weiter 
+	// Wenn man das Object mit dem Tag lethal trifft wird das männchen zerstört
 	void OnCollisionEnter(Collision other){
-		if(other.gameObject.name == "Obstacle"){
-            tot = true;
-           
-            
-        }
-        //wenn der spieler ein stern sammelt wird der sternenzaehler einen hochh gesetzt
+		if(other.gameObject.tag == "lethal"){
+			Destroy (gameObject);
+		}
 		if(other.gameObject.name == "Stern"){
 			Destroy(other.gameObject);
 			sternzaehler += 1;
-			GM.zVelAdj = 0;
 		}
 	}
 
