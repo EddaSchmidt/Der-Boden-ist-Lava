@@ -65,6 +65,7 @@ public class moveorb : MonoBehaviour {
 		if(other.gameObject.name == "Stern"){
 			Destroy(other.gameObject);
 			sternzaehler += 1;
+			GM.zVelAdj = 0;
 		}
 	}
 
