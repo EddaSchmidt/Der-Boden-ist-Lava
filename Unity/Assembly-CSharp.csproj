@@ -62,6 +62,10 @@
      <Compile Include="Assets\02-scripts\moveorb.cs" />
      <Compile Include="Assets\02-scripts\PlayerMotor.cs" />
      <Compile Include="Assets\02-scripts\Zerbrechen.cs" />
+<<<<<<< HEAD
+     <Compile Include="Assets\CameraMotor.cs" />
+=======
+>>>>>>> c564be5fc0e227955a17204886bfa28996037f33
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -324,6 +328,10 @@
  <Reference Include="TextMeshPro-2017.2-Runtime">
  <HintPath>C:/Users/Edda Schmidt/Documents/GitHub/Der-Boden-ist-Lava/Unity/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.2-Runtime.dll</HintPath>
  </Reference>
+<<<<<<< HEAD
+ <Reference Include="TextMeshPro-2017.2-Runtime">
+ <HintPath>/Users/LiyaRedae/Documents/GitHub/Der-Boden-ist-Lava/Unity/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.2-Runtime.dll</HintPath>
+=======
  <Reference Include="UnityEngine.Analytics">
  <HintPath>C:/Users/Edda Schmidt/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
  </Reference>
@@ -332,6 +340,7 @@
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
+>>>>>>> c564be5fc0e227955a17204886bfa28996037f33
  </Reference>
  <Reference Include="System">
  <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.dll</HintPath>
@@ -356,6 +365,12 @@
  </Reference>
  <Reference Include="Boo.Lang">
  <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>/Users/LiyaRedae/Library/Unity/cache/packages/packages.unity.com/com.unity.analytics@1.0.1/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Purchasing">
+ <HintPath>/Users/LiyaRedae/Library/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

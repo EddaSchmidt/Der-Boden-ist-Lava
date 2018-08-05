@@ -1,4 +1,12 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/01-Scenes/SampleScene.unity
+=======
+<<<<<<< HEAD
+- path: Assets/01-Scenes/Spiel_Menue.unity
+=======
+- path: Assets/01-Scenes/ScriptAusweichSceneVonSamuelRiestererErstelltAm05-08-2018DamitGithubNichtWiederRumSpackt.unity
+>>>>>>> c564be5fc0e227955a17204886bfa28996037f33
+>>>>>>> 1c9d125c29194abee1580cf02a91ddd9bf83e97c
   isLoaded: 1
   isActive: 1
