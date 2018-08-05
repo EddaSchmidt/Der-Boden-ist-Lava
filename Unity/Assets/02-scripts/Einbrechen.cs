@@ -28,8 +28,9 @@ public class Einbrechen : MonoBehaviour {
         {
             rigidPlatte.isKinematic = false;
             eingebrochen = true;
-            //Destroy(gameObject);
             Instantiate(remains, transform.position, transform.rotation);
+            Destroy(gameObject);
+            
 
 
         }

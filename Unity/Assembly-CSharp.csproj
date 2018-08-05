@@ -53,13 +53,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\02-scripts\CameraMotore.cs" />
      <Compile Include="Assets\02-scripts\CameraMov.cs" />
      <Compile Include="Assets\02-scripts\effects.cs" />
      <Compile Include="Assets\02-scripts\Einbrechen.cs" />
      <Compile Include="Assets\02-scripts\ExitOnClick.cs" />
      <Compile Include="Assets\02-scripts\MainMenu.cs" />
      <Compile Include="Assets\02-scripts\moveorb.cs" />
+     <Compile Include="Assets\02-scripts\PlayerMotor.cs" />
      <Compile Include="Assets\02-scripts\Zerbrechen.cs" />
+     <Compile Include="Assets\CameraMotor.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
