@@ -54,4 +54,16 @@ public class PlayerMotor : MonoBehaviour {
 
         controller.Move(moveVector * Time.deltaTime); //Spieler bewegen, Time.deltaTime damit er nicht so schnell lauft
 	}
+
+    private void OnControllerColliderHit(ControllerColliderHit hit){
+        
+        if (hit.point.z > transform.position.z + controller.radius)
+            Death ();
+    }
+
+    private void Death(){
+
+        isDead = true;
+        GetComponent<Score> ().OnDeath();
+    }
 }
