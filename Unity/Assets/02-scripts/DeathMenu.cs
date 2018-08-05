@@ -1,8 +1,18 @@
-/*using System.Collections;
+/*
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagment;
 
 public class DeathMenu : MonoBehaviour {
+
+	public Text scoreText;
+	public Image BackgroundImg;
+
+	private bool isShowned = false;
+
+	private float transition = 0.0f;
 
 	void Start () {
 		gameObject.SetActive(false);
@@ -13,7 +23,7 @@ public class DeathMenu : MonoBehaviour {
 			return;
 
 		transition += Time.deltaTime;
-		BackgroundImg.color = Color.Lerp (new Color (0,0,0,0), Color.blck, transition);
+		BackgroundImg.color = Color.Lerp (new Color (0,0,0,0), Color.black, transition);
 	}
 
 	public void ToggleEndMenu(float score){
