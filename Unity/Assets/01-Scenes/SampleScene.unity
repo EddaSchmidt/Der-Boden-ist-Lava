@@ -474,6 +474,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilePrefabs:
-  - {fileID: 1754238289829652, guid: 26276a00a5b57ac4eb8d8ac93125ae39, type: 2}
-  - {fileID: 1528778821847442, guid: 388d174447d27d9449afa23e7fd6ace0, type: 2}
-  - {fileID: 1792829975642134, guid: 22f6116ae62d2ee489fc9c1be133b445, type: 2}
+  - {fileID: 1153081882417516, guid: 2dc5130bdd0255242a24ffaa8b075362, type: 2}
+  - {fileID: 1255841726011368, guid: da0fe992c9f01c9408c536fd1c2465b2, type: 2}
+  - {fileID: 1479113978741796, guid: 050d47ee3009a734b9184e5a43ce26fd, type: 2}
