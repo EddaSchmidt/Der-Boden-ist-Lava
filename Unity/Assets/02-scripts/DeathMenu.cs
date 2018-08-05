@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 using System.Collections;
+=======
+/*using System.Collections;
+using System.Collections.Generic;
+>>>>>>> 06180b288561c381d8655162970d5e7336bcf327
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagment;
@@ -37,4 +42,4 @@ public class DeathMenu : MonoBehaviour {
 	public void ToMenu(){
 		SceneManager.LoadScene("Menu");
 	}
-}
+}*/
