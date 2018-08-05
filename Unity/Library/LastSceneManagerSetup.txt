@@ -1,12 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/01-Scenes/gameover.unity
-=======
-<<<<<<< HEAD
-- path: Assets/01-Scenes/Spiel.unity
-=======
 - path: Assets/01-Scenes/SampleScene.unity
->>>>>>> 29db67d5578aac8dd037fdad6376079f7dc1329b
->>>>>>> 732880b0c65ce2c10eee66ca68d4dd7b92d824fd
   isLoaded: 1
   isActive: 1
