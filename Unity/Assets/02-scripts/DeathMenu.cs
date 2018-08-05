@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-=======
-/*
->>>>>>> 41c7e7b64eb44f554282c40c01bac0e6d3660c48
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagment;
+using UnityEngine.SceneManagement;
 
 public class DeathMenu : MonoBehaviour {
 
