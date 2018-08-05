@@ -8,7 +8,6 @@ public class death : MonoBehaviour {
     public GameObject groundPlate;
 
 
-    void OnCollision
 
 
     void breakIn() {
