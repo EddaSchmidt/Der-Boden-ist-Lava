@@ -10,7 +10,7 @@ public class Highscore : MonoBehaviour {
 
 	private bool isDead = false;
 
-	private Text highscoreText;
+	public Text highscoreText;
 	public DeathMenu deathMenu;
 
 

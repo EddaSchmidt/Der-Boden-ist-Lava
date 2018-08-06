@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 21569721}
   - component: {fileID: 21569720}
   - component: {fileID: 21569719}
+  - component: {fileID: 21569723}
   - component: {fileID: 21569718}
   m_Layer: 0
   m_Name: Spieler
@@ -140,9 +141,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 21569717}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e206d0a2470a88c4687483f491117ce0, type: 3}
+  m_Script: {fileID: 11500000, guid: 20d8b7b2fd7944926a85879e3af04f4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highscor: 0
+  highscoreText: {fileID: 1545153596}
+  deathMenu: {fileID: 0}
 --- !u!143 &21569719
 CharacterController:
   m_ObjectHideFlags: 0
@@ -215,6 +219,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &21569723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 21569717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e206d0a2470a88c4687483f491117ce0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1471823130
 GameObject:
   m_ObjectHideFlags: 0
