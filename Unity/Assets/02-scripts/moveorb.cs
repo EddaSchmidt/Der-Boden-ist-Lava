@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class moveorb : MonoBehaviour {
 
@@ -11,7 +12,10 @@ public class moveorb : MonoBehaviour {
 		public float horizVel = 0; //In welche Line sich der Orb bewegt
 		public int laneNum = 0; //guckt in welcher Linie sich der Ball befindet & vermeidet überschreitungen vom Feld
 		public string controlLock = "n";
-		public int sternzaehler = 0;
+		public int count;
+		public Text countText;
+		public Text winText;
+
 
         Rigidbody rbSpieler;
         public bool tot = false; //testen ob Spieler noch lebt oder nicht
@@ -21,6 +25,7 @@ public class moveorb : MonoBehaviour {
     // Use this for initialization
     void Start () {
         rbSpieler = GetComponent<Rigidbody>(); //Rigidbody von Sphere in rbSpieler speichern
+        count = 0;
     }
 	
 	// Update is called once per frame
@@ -58,14 +63,26 @@ public class moveorb : MonoBehaviour {
 	void OnCollisionEnter(Collision other){
 		if(other.gameObject.name == "Obstacle"){
             tot = true;   
+           
+           
+
         }
         //wenn der spieler ein stern sammelt wird der sternenzaehler einen hochh gesetzt
 		if(other.gameObject.name == "Stern"){
 			Destroy(other.gameObject);
-			sternzaehler += 1;
+			count += 1;
 			GM.zVelAdj = 0;
 		}
 	}
+
+	/*void SetCountText ()
+    {
+        countText.text = "Count: " + count.ToString ();
+        if (count >= 12)
+        {
+            winText.text = "You Win!";
+        }
+    }*/
 
 
 	//Nach einer halben sekunde wird der controllock wieder gelöst
