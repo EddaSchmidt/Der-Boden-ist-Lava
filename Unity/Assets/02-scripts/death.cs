@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class death : MonoBehaviour {
 
@@ -24,5 +25,12 @@ public class death : MonoBehaviour {
 
     void Update () {
 
+    }
+
+    void OnCollisionEnter(Collision collision) {
+        if (collision.collider.name == "GroundPlate") {
+            SceneManager.LoadScene("MainMenu");
+            Debug.Log("Collision happened!");
+        }
     }
 }
