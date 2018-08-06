@@ -54,12 +54,10 @@ public class moveorb : MonoBehaviour {
 		}
 	}
 
-	// Wenn man der Spieler ein Obstacle beruehrt dann wir tot auf true gesetzt und der spieler laeuft nicht weiter 
+	// Wenn der Spieler ein Obstacle beruehrt dann wird tot auf true gesetzt und der spieler laeuft nicht weiter 
 	void OnCollisionEnter(Collision other){
 		if(other.gameObject.name == "Obstacle"){
-            tot = true;
-           
-            
+            tot = true;   
         }
         //wenn der spieler ein stern sammelt wird der sternenzaehler einen hochh gesetzt
 		if(other.gameObject.name == "Stern"){
