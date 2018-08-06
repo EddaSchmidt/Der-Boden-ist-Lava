@@ -61,7 +61,7 @@
      <Compile Include="Assets\02-scripts\Einbrechen.cs" />
      <Compile Include="Assets\02-scripts\ExitOnClick.cs" />
      <Compile Include="Assets\02-scripts\GM.cs" />
-     <Compile Include="Assets\02-scripts\Highscore.cs" />
+     <Compile Include="Assets\02-scripts\highscore.cs" />
      <Compile Include="Assets\02-scripts\MainMenu.cs" />
      <Compile Include="Assets\02-scripts\moveorb.cs" />
      <Compile Include="Assets\02-scripts\PlayerMotor.cs" />

@@ -11,7 +11,7 @@ public class highscore : MonoBehaviour {
 	private bool isDead = false;
 
 	private Text highscoreText;
-	//public DeathMenu deathMenu;
+	public DeathMenu deathMenu;
 
 
 	//Update is calles once per frame
@@ -35,8 +35,9 @@ public class highscore : MonoBehaviour {
 
 		highscoreToNextLevel *= 2;
 		difficultyLevel++;
+        //GetComponent<PlayerMotor>().
 
-		//GetCompenent<PlayerMotor>(). SetSpeed (difficultyLevel);
+		//GetCompenent<PlayerMotor>().SetSpeed(difficultyLevel);
 
 		Debug.Log (difficultyLevel);
 	}
