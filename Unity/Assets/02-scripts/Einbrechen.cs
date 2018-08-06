@@ -6,7 +6,7 @@ public class Einbrechen : MonoBehaviour {
 
     private Rigidbody rigidPlatte;
     public bool eingebrochen = false;
-    public GameObject remains;
+    //public GameObject remains;
 
     // Use this for initialization
     void Start()
@@ -28,7 +28,7 @@ public class Einbrechen : MonoBehaviour {
         {
             rigidPlatte.isKinematic = false;
             eingebrochen = true;
-            Instantiate(remains, transform.position, transform.rotation);
+            //Instantiate(remains, transform.position, transform.rotation);
             Destroy(gameObject);
             
 

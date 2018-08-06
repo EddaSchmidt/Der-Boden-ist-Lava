@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 114080286622611590}
   m_Layer: 0
   m_Name: Obstacle3Lang
-  m_TagString: einbrechen
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -492,9 +492,11 @@ GameObject:
   - component: {fileID: 33904412250061264}
   - component: {fileID: 23689803259101754}
   - component: {fileID: 65096215883636784}
+  - component: {fileID: 114790928710682838}
+  - component: {fileID: 54598902210595938}
   m_Layer: 0
   m_Name: Cube3 (5)
-  m_TagString: Untagged
+  m_TagString: einbrechen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1591,7 +1593,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 72691d88097678645a8cd250a0caa837, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2025,6 +2027,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!54 &54598902210595938
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1953591571248710}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &65064236659958166
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -2283,13 +2300,24 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1255841726011368}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 418ed662a42b53546b6ae2bbbbb443f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eingebrochen: 0
+--- !u!114 &114790928710682838
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1953591571248710}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 418ed662a42b53546b6ae2bbbbb443f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   eingebrochen: 0
-  remains: {fileID: 0}
 --- !u!136 &136077467382200034
 CapsuleCollider:
   m_ObjectHideFlags: 1

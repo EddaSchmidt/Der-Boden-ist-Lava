@@ -18,8 +18,7 @@ public class DeathMenu : MonoBehaviour {
 	}
 
 	void Update() {
-		if (!isShowned)
-			return;
+		if (!isShowned) return;
 
 		transition += Time.deltaTime;
 		BackgroundImg.color = Color.Lerp (new Color (0,0,0,0), Color.black, transition);

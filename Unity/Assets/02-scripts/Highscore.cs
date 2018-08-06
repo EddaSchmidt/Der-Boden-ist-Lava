@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class highscore : MonoBehaviour {
-	private float highscor = 0.0f;
+	public float highscor = 0.0f;
 	private int difficultyLevel = 1; 
 	private int maxDifficultylevel =  10;
 	private int highscoreToNextLevel = 10;
