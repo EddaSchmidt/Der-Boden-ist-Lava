@@ -76,9 +76,10 @@ GameObject:
   - component: {fileID: 33258958078599004}
   - component: {fileID: 23139381379328180}
   - component: {fileID: 65239979035218914}
+  - component: {fileID: 114281859168750902}
   m_Layer: 0
-  m_Name: Cube (11)
-  m_TagString: Untagged
+  m_Name: Obstacle
+  m_TagString: einbrechen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1339,7 +1340,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.24, z: 0}
 --- !u!65 &65270401687298568
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1472,3 +1473,14 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114281859168750902
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1143645035206766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30de4373bb98fff40b599a5a6ad990de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

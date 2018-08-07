@@ -17,6 +17,8 @@ public class PlayerMotor : MonoBehaviour {
 
     private bool isDead = false;
 
+    public int sternzaehler;
+
 	// Use this for initialization
 	void Start () {
         controller = GetComponent<CharacterController>();
@@ -57,10 +59,23 @@ public class PlayerMotor : MonoBehaviour {
 
     //aufruf jedes mal wenn der Spieler etwas beruehrt
     private void OnControllerColliderHit(ControllerColliderHit hit) {
+        /* 
+         if (hit.point.z > transform.position.z + controller.radius)
+         { //hit.point ist Vector3 und man sagt wenn der spieler auf z achse auf etw trifft dann tot (nur sachen vor einem)
+             Death();
+         }
+         */
         
-        if (hit.point.z > transform.position.z + controller.radius) //hit.point ist Vector3 und man sagt wenn der spieler auf z achse auf etw trifft dann tot (nur sachen vor einem)
-            Death ();
     }
+/*
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.collider.tag == "spieler")
+        {
+            
+        }
+    }
+    */
 
     private void Death(){
 
