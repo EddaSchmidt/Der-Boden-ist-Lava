@@ -7,6 +7,7 @@ TagManager:
   - lethal
   - einbrechen
   - spieler
+  - Stern
   layers:
   - Default
   - TransparentFX

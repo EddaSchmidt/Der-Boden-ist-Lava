@@ -17,13 +17,13 @@ public class PlayerMotor : MonoBehaviour {
 
     private bool isDead = false;
 
-    public int sternzaehler;
+    public int sternzaehler = 0;
 
 	// Use this for initialization
 	void Start () {
         controller = GetComponent<CharacterController>();
         startTime = Time.time;
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -55,27 +55,36 @@ public class PlayerMotor : MonoBehaviour {
         moveVector.z = speed; 
 
         controller.Move(moveVector * Time.deltaTime); //Spieler bewegen, Time.deltaTime damit er nicht so schnell lauft
+
+        //wenn spieler runterfällt soll deathmenu aufgerufen werden
+        if (controller.transform.position.y < -10)
+        {
+            Death();
+        }
+
 	}
 
     //aufruf jedes mal wenn der Spieler etwas beruehrt
     private void OnControllerColliderHit(ControllerColliderHit hit) {
-        /* 
-         if (hit.point.z > transform.position.z + controller.radius)
-         { //hit.point ist Vector3 und man sagt wenn der spieler auf z achse auf etw trifft dann tot (nur sachen vor einem)
-             Death();
-         }
-         */
+        
+        //STERN
+         if (hit.gameObject.tag == "Stern")
+        {
+            sternzaehler++;
+            //Stern verschwindet
+            Destroy(hit.gameObject);
+            Debug.Log(sternzaehler);
+        }
+
+         //EINBRECHEN   
+        Rigidbody body = hit.collider.attachedRigidbody;
+         if (hit.gameObject.tag == "einbrechen")
+        {
+            body.useGravity = true;
+        }
         
     }
-/*
-    void OnCollisionEnter(Collision col)
-    {
-        if (col.collider.tag == "spieler")
-        {
-            
-        }
-    }
-    */
+    
 
     private void Death(){
 

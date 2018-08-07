@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 21569721}
   - component: {fileID: 21569720}
   - component: {fileID: 21569719}
+  - component: {fileID: 21569724}
   - component: {fileID: 21569723}
   - component: {fileID: 21569718}
   m_Layer: 0
@@ -230,6 +231,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e206d0a2470a88c4687483f491117ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sternzaehler: 0
+--- !u!136 &21569724
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 21569717}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &222126725
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,8 +815,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePrefabs:
   - {fileID: 1784440290864734, guid: 4e6bf528c8d737440be3b5992ce82ba3, type: 2}
-  - {fileID: 1634815617992264, guid: 14691bb9df14562419b2eea038712c20, type: 2}
+  - {fileID: 1784440290864734, guid: 4e6bf528c8d737440be3b5992ce82ba3, type: 2}
   - {fileID: 1487049707577072, guid: e607f9536b31f314a89ff4a2723f9353, type: 2}
+  - {fileID: 1381018503006224, guid: a60f45bff2dda294eada9c3b6a815af7, type: 2}
 --- !u!4 &1471823132
 Transform:
   m_ObjectHideFlags: 0

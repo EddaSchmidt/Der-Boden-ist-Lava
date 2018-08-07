@@ -65,7 +65,6 @@
      <Compile Include="Assets\02-scripts\MainMenu.cs" />
      <Compile Include="Assets\02-scripts\moveorb.cs" />
      <Compile Include="Assets\02-scripts\PlayerMotor.cs" />
-     <Compile Include="Assets\02-scripts\SpielEinbrechen.cs" />
      <Compile Include="Assets\02-scripts\TileManager.cs" />
      <Compile Include="Assets\02-scripts\Zerbrechen.cs" />
      <None Include="Assets\read me.txt" />

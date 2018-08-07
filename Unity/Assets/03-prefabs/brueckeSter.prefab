@@ -256,9 +256,11 @@ GameObject:
   - component: {fileID: 33939631510582642}
   - component: {fileID: 23979205066006690}
   - component: {fileID: 136717022310009542}
+  - component: {fileID: 114370917241691118}
+  - component: {fileID: 135573640044899854}
   m_Layer: 0
-  m_Name: Cylinder
-  m_TagString: Untagged
+  m_Name: Stern
+  m_TagString: Stern
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -408,7 +410,7 @@ Transform:
   m_GameObject: {fileID: 1764744273182936}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1, y: 3.333333, z: 1}
-  m_LocalScale: {x: 1, y: 3.333333, z: 1}
+  m_LocalScale: {x: 0.5, y: 3.333333, z: 1}
   m_Children: []
   m_Father: {fileID: 4682541190239350}
   m_RootOrder: 16
@@ -1334,7 +1336,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1764744273182936}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &33994179542642606
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -1546,6 +1548,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114370917241691118
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1764744273182936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30de4373bb98fff40b599a5a6ad990de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &135573640044899854
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1764744273182936}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: -0.000000059604645, z: 0}
 --- !u!136 &136717022310009542
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -1554,7 +1579,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1764744273182936}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
