@@ -67,6 +67,7 @@
      <Compile Include="Assets\02-scripts\PlayerMotor.cs" />
      <Compile Include="Assets\02-scripts\TileManager.cs" />
      <Compile Include="Assets\02-scripts\Zerbrechen.cs" />
+     <None Include="Assets\read me.txt" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/Edda Schmidt/Documents/GitHub/Der-Boden-ist-Lava/Unity/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>

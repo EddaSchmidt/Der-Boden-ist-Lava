@@ -12,8 +12,8 @@ public class PlayerMotor : MonoBehaviour {
 
     private float speed = 5.0f; // Schnelligkeit festelgen auf 5m pro sekunde
 
-    private float animationDuration = 3.0f;
-    private float startTime;
+    private float animationDuration = 3.0f; //spieler darf in ersten 3 sek nicht bewegen
+    private float startTime; // damit der spieler sich am anfang nicht bewegt
 
     private bool isDead = false;
 
@@ -26,10 +26,10 @@ public class PlayerMotor : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (isDead)
+        if (isDead) // wenn spieler tot dann nur return also spieler movement nicht mehr updaten
             return;
 
-        if (Time.time - startTime < animationDuration) {
+        if (Time.time - startTime < animationDuration) { //damit der spieler sich nicht am anfang bewegt
             controller.Move (Vector3.forward * speed * Time.deltaTime);
             return;
         }
@@ -55,9 +55,10 @@ public class PlayerMotor : MonoBehaviour {
         controller.Move(moveVector * Time.deltaTime); //Spieler bewegen, Time.deltaTime damit er nicht so schnell lauft
 	}
 
-    private void OnControllerColliderHit(ControllerColliderHit hit){
+    //aufruf jedes mal wenn der Spieler etwas beruehrt
+    private void OnControllerColliderHit(ControllerColliderHit hit) {
         
-        if (hit.point.z > transform.position.z + controller.radius)
+        if (hit.point.z > transform.position.z + controller.radius) //hit.point ist Vector3 und man sagt wenn der spieler auf z achse auf etw trifft dann tot (nur sachen vor einem)
             Death ();
     }
 

@@ -35,9 +35,8 @@ public class Highscore : MonoBehaviour {
 
 		highscoreToNextLevel *= 2;
 		difficultyLevel++;
-        //GetComponent<PlayerMotor>().
-
-		//GetCompenent<PlayerMotor>().SetSpeed(difficultyLevel);
+        
+        //GetCompenent<PlayerMotor>().SetSpeed(difficultyLevel);
 
 		Debug.Log (difficultyLevel);
 	}
@@ -51,6 +50,6 @@ public class Highscore : MonoBehaviour {
         }
 
 		PlayerPrefs.SetFloat("Highscore", highscor);
-		//deathMenu.ToggelEndMenu (highscor);
+		deathMenu.ToggleEndMenu(highscor);
 	}
 }
