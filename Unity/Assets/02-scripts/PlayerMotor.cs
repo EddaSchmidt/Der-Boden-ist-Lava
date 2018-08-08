@@ -19,8 +19,13 @@ public class PlayerMotor : MonoBehaviour {
 
     public int sternzaehler = 0;
 
-	// Use this for initialization
-	void Start () {
+    public GameObject zerstortCube;
+    //public float cubeGroesse = -0.2f;
+    //public int cubesTeile = 5;
+
+
+    // Use this for initialization
+    void Start () {
         controller = GetComponent<CharacterController>();
         startTime = Time.time;
     }
@@ -78,12 +83,55 @@ public class PlayerMotor : MonoBehaviour {
 
          //EINBRECHEN   
         Rigidbody body = hit.collider.attachedRigidbody;
+        GameObject obstacle = hit.collider.gameObject; //speichert das obstacle auf das der spieler trifft ind obstacle
          if (hit.gameObject.tag == "einbrechen")
         {
-            body.useGravity = true;
+            //body.useGravity = true;
+            brechen(obstacle); //uebergibt das getroffene obstacle an brechen()
+
         }
         
     }
+    
+    public void brechen(GameObject obj)
+    {
+        obj.SetActive(false);
+        Instantiate(zerstortCube, obj.transform.position, obj.transform.rotation);
+        
+    }
+    
+    /*
+    public void brechen(GameObject obj)
+    {
+        obj.SetActive(false); //grosse Platte verschwinden 
+        
+        for (int x = 0; x < cubesTeile; x++)
+        {
+            for (int y = 0; y < cubesTeile; y++)
+            {
+                for (int z = 0; z < cubesTeile; z++)
+                {
+                    createTeile(x, y, z, obj);
+                }
+            }
+        }
+
+    }
+    
+        void createTeile(int x, int y, int z, GameObject obj)
+        {
+            GameObject teilchen;
+            teilchen = GameObject.CreatePrimitive(PrimitiveType.Cube);
+
+            teilchen.transform.position = obj.transform.position + new Vector3(cubeGroesse * x, cubeGroesse*y , cubeGroesse * z);
+            teilchen.transform.localScale = new Vector3(cubeGroesse, cubeGroesse, cubeGroesse);
+
+            teilchen.AddComponent<Rigidbody>();
+            teilchen.GetComponent<Rigidbody>().mass = cubeGroesse;
+
+            
+        }
+        */
     
 
     private void Death(){

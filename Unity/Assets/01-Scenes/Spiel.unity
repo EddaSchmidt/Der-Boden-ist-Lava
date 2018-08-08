@@ -232,6 +232,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sternzaehler: 0
+  zerstortCube: {fileID: 1125282910359184, guid: 555bb0f72675fc244ad1213be714d43b,
+    type: 2}
 --- !u!136 &21569724
 CapsuleCollider:
   m_ObjectHideFlags: 0

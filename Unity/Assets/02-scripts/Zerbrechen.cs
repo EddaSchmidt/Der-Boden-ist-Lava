@@ -18,7 +18,7 @@ public class Zerbrechen : MonoBehaviour {
 		
 	}
 
-    private void OnTriggerENter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name == "spieler")
         {
