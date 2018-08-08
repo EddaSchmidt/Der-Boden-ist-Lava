@@ -1039,8 +1039,14 @@ MonoBehaviour:
   tilePrefabs:
   - {fileID: 1784440290864734, guid: 4e6bf528c8d737440be3b5992ce82ba3, type: 2}
   - {fileID: 1784440290864734, guid: 4e6bf528c8d737440be3b5992ce82ba3, type: 2}
-  - {fileID: 1487049707577072, guid: e607f9536b31f314a89ff4a2723f9353, type: 2}
+  - {fileID: 1784440290864734, guid: 4e6bf528c8d737440be3b5992ce82ba3, type: 2}
+  - {fileID: 1750711367125604, guid: 2d76205005cdb254291305e87ff1e4d9, type: 2}
+  - {fileID: 1431156600026730, guid: b7bbd3020c4e96d4bba5bf01c4338496, type: 2}
   - {fileID: 1381018503006224, guid: a60f45bff2dda294eada9c3b6a815af7, type: 2}
+  - {fileID: 1243033190034102, guid: eed54c7210dd4d44cb60b8b14a83ec8a, type: 2}
+  - {fileID: 1166779712005100, guid: c1feb92a9358f35419300ed0eb22476d, type: 2}
+  - {fileID: 1487049707577072, guid: e607f9536b31f314a89ff4a2723f9353, type: 2}
+  - {fileID: 1784440290864734, guid: 4e6bf528c8d737440be3b5992ce82ba3, type: 2}
 --- !u!4 &1471823132
 Transform:
   m_ObjectHideFlags: 0
