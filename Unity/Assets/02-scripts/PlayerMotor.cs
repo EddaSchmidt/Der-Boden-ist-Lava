@@ -19,9 +19,8 @@ public class PlayerMotor : MonoBehaviour {
 
     public int sternzaehler = 0;
 
-    public GameObject zerstortCube;
-    //public float cubeGroesse = -0.2f;
-    //public int cubesTeile = 5;
+    public float cubeGroesse = 0.2f;
+
 
 
     // Use this for initialization
@@ -87,29 +86,23 @@ public class PlayerMotor : MonoBehaviour {
          if (hit.gameObject.tag == "einbrechen")
         {
             //body.useGravity = true;
+
             brechen(obstacle); //uebergibt das getroffene obstacle an brechen()
 
         }
         
     }
     
-    public void brechen(GameObject obj)
-    {
-        obj.SetActive(false);
-        Instantiate(zerstortCube, obj.transform.position, obj.transform.rotation);
-        
-    }
     
-    /*
     public void brechen(GameObject obj)
     {
         obj.SetActive(false); //grosse Platte verschwinden 
         
-        for (int x = 0; x < cubesTeile; x++)
+        for (int x = 0; x < 7; x++)
         {
-            for (int y = 0; y < cubesTeile; y++)
+            for (int y = 0; y < 1; y++)
             {
-                for (int z = 0; z < cubesTeile; z++)
+                for (int z = 0; z < 15; z++)
                 {
                     createTeile(x, y, z, obj);
                 }
@@ -131,7 +124,7 @@ public class PlayerMotor : MonoBehaviour {
 
             
         }
-        */
+        
     
 
     private void Death(){
