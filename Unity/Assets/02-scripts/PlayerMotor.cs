@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMotor : MonoBehaviour {
 
@@ -17,7 +18,8 @@ public class PlayerMotor : MonoBehaviour {
 
     private bool isDead = false;
 
-    public int sternzaehler = 0;
+    public Text sterntext;
+    public float sternzaehler = 0f;
 
     public float cubeGroesse = 0.2f;
 
@@ -60,12 +62,16 @@ public class PlayerMotor : MonoBehaviour {
 
         controller.Move(moveVector * Time.deltaTime); //Spieler bewegen, Time.deltaTime damit er nicht so schnell lauft
 
+        //STERNCHEN ANZEIGE
+        sterntext.text = ((float)sternzaehler).ToString();
+
         //wenn spieler runterfällt soll deathmenu aufgerufen werden
-        if (controller.transform.position.y < -10)
+        if (controller.transform.position.y < -15)
         {
             Death();
         }
 
+        
 	}
 
     //aufruf jedes mal wenn der Spieler etwas beruehrt
@@ -85,8 +91,7 @@ public class PlayerMotor : MonoBehaviour {
         GameObject obstacle = hit.collider.gameObject; //speichert das obstacle auf das der spieler trifft ind obstacle
          if (hit.gameObject.tag == "einbrechen")
         {
-            //body.useGravity = true;
-
+           
             brechen(obstacle); //uebergibt das getroffene obstacle an brechen()
 
         }
@@ -98,7 +103,7 @@ public class PlayerMotor : MonoBehaviour {
     {
         obj.SetActive(false); //grosse Platte verschwinden 
         
-        for (int x = 0; x < 7; x++)
+        for (int x = 0; x < 9; x++)
         {
             for (int y = 0; y < 1; y++)
             {
@@ -116,7 +121,7 @@ public class PlayerMotor : MonoBehaviour {
             GameObject teilchen;
             teilchen = GameObject.CreatePrimitive(PrimitiveType.Cube);
 
-            teilchen.transform.position = obj.transform.position + new Vector3(cubeGroesse * x, cubeGroesse*y , cubeGroesse * z);
+            teilchen.transform.position = obj.transform.position + new Vector3(cubeGroesse * x+0.5f, cubeGroesse*y , cubeGroesse * z+ 1.25f);
             teilchen.transform.localScale = new Vector3(cubeGroesse, cubeGroesse, cubeGroesse);
 
             teilchen.AddComponent<Rigidbody>();
