@@ -38,6 +38,7 @@ public class PlayerMotor : MonoBehaviour {
     void Start () {
         controller = GetComponent<CharacterController>();
         startTime = Time.time;
+		speedMilestoneCount = speedIncreaseMilestone; 
     }
 	
 	// Update is called once per frame
@@ -75,6 +76,7 @@ public class PlayerMotor : MonoBehaviour {
 
          if (transform.position.z > speedMilestoneCount){
             speedMilestoneCount+= speedIncreaseMilestone;
+			speedIncreaseMilestone = speedIncreaseMilestone * speedMultiplier;
             speed = speed + speedMultiplier;
         }
 

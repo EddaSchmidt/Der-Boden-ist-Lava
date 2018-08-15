@@ -229,9 +229,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e206d0a2470a88c4687483f491117ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  speedMultiplier: 1.05
-  speedIncreaseMilestone: 100
+  speed: 5
+  speedMultiplier: 1.25
+  speedIncreaseMilestone: 50
   sterntext: {fileID: 572420140}
   sternzaehler: 0
   cubeGroesse: -0.2
