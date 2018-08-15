@@ -12,7 +12,7 @@ public class PlayerMotor : MonoBehaviour {
     private float gravity = 12.0f; 
 
 
-    private float speed; // = 5.0f; // Schnelligkeit festelgen auf 5m pro sekunde
+    public float speed; // = 5.0f; // Schnelligkeit festelgen auf 5m pro sekunde
 
     public float speedMultiplier;
 
@@ -73,7 +73,7 @@ public class PlayerMotor : MonoBehaviour {
         controller.Move(moveVector * Time.deltaTime); //Spieler bewegen, Time.deltaTime damit er nicht so schnell lauft
 
 
-         if (transform.position.x > speedMilestoneCount){
+         if (transform.position.z > speedMilestoneCount){
             speedMilestoneCount+= speedIncreaseMilestone;
             speed = speed + speedMultiplier;
         }
