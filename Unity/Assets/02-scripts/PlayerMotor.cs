@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,7 +11,16 @@ public class PlayerMotor : MonoBehaviour {
     private float verticalVelocity = 0.0f;
     private float gravity = 12.0f; 
 
-    private float speed = 5.0f; // Schnelligkeit festelgen auf 5m pro sekunde
+
+    private float speed; // = 5.0f; // Schnelligkeit festelgen auf 5m pro sekunde
+
+    public float speedMultiplier;
+
+    public float speedIncreaseMilestone;
+
+    private float speedMilestoneCount;
+
+
 
     private float animationDuration = 3.0f; //spieler darf in ersten 3 sek nicht bewegen
     private float startTime; // damit der spieler sich am anfang nicht bewegt
@@ -52,6 +61,7 @@ public class PlayerMotor : MonoBehaviour {
             verticalVelocity -= gravity * Time.deltaTime;
         }
 
+
         //Vektoren jedes mal neu berechnen
         //X - Left and Right
         moveVector.x = Input.GetAxisRaw("Horizontal") * speed; //Spieler kann rechts und links gehen
@@ -61,6 +71,15 @@ public class PlayerMotor : MonoBehaviour {
         moveVector.z = speed; 
 
         controller.Move(moveVector * Time.deltaTime); //Spieler bewegen, Time.deltaTime damit er nicht so schnell lauft
+
+
+         if (transform.position.x > speedMilestoneCount){
+            speedMilestoneCount+= speedIncreaseMilestone;
+            speed = speed + speedMultiplier;
+        }
+
+
+
 
         //STERNCHEN ANZEIGE
         sterntext.text = ((float)sternzaehler).ToString();
