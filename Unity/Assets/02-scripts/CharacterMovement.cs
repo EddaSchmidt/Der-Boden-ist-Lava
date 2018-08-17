@@ -6,6 +6,15 @@ public class CharacterMovement : MonoBehaviour {
 
     public GameObject player;
 
+
+    public IEnumerator Start () {
+        if (Input.GetKeyDown(KeyCode.A)) {
+            player.transform.position = Vector3.MoveTowards(player.transform.position, player.transform.position + Vector3.left * 2, 20f * Time.deltaTime);
+        }
+        yield return null;
+    }
+
+    /*
     public Transform startPos;
     public Transform endPos;
     public bool repeatable = false;
@@ -26,10 +35,12 @@ public class CharacterMovement : MonoBehaviour {
     }
 
     void Update () {
-        if(!repeatable) {
-            float currentDuration = (Time.time - startTime) * speed;
-            float journeyFraction = currentDuration / totalDistance;
-            this.transform.position = Vector3.Lerp(startPos.position, endPos.position, journeyFraction);
+        if (Input.GetKeyDown(KeyCode.A)) {
+            if (!repeatable) {
+                float currentDuration = (Time.time - startTime) * speed;
+                float journeyFraction = currentDuration / totalDistance;
+                this.transform.position = Vector3.Lerp(startPos.position, endPos.position, journeyFraction);
+            }
         }
     }
 
@@ -42,48 +53,48 @@ public class CharacterMovement : MonoBehaviour {
             yield return null;
         }
 
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    }*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /* public GameObject player;
     public Vector3 startPos;
     public Vector3 endPos;
