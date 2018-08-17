@@ -9,8 +9,8 @@ public class CharacterMovement : MonoBehaviour {
     public Transform startPos;
     public Transform endPos;
     public bool repeatable = false;
-    public float speed = 0.5f;
-    public float lerpTime = 2.0f;
+    public float speed = 40f;
+    public float lerpTime = 20.0f;
 
     private float startTime;
     private float totalDistance;
@@ -29,7 +29,7 @@ public class CharacterMovement : MonoBehaviour {
         if(!repeatable) {
             float currentDuration = (Time.time - startTime) * speed;
             float journeyFraction = currentDuration / totalDistance;
-            player.transform.position = Vector3.Lerp(startPos.position, endPos.position, journeyFraction);
+            this.transform.position = Vector3.Lerp(startPos.position, endPos.position, journeyFraction);
         }
     }
 
@@ -38,7 +38,7 @@ public class CharacterMovement : MonoBehaviour {
         float rate = (1f / time) * speed;
         while (i < 1f) {
             i = i + Time.deltaTime * rate;
-            player.transform.position = Vector3.Lerp(a, b, i);
+            this.transform.position = Vector3.Lerp(a, b, i);
             yield return null;
         }
 
