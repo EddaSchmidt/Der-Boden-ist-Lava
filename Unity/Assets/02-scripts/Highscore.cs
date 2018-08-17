@@ -10,7 +10,7 @@ public class Highscore : MonoBehaviour {
 
 	private bool isDead = false;
 
-	private Text highscoreText;
+	public Text highscoreText;
 	public DeathMenu deathMenu;
 
 
@@ -35,9 +35,8 @@ public class Highscore : MonoBehaviour {
 
 		highscoreToNextLevel *= 2;
 		difficultyLevel++;
-        //GetComponent<PlayerMotor>().
-
-		//GetCompenent<PlayerMotor>().SetSpeed(difficultyLevel);
+        
+        //GetCompenent<PlayerMotor>().SetSpeed(difficultyLevel);
 
 		Debug.Log (difficultyLevel);
 	}
@@ -50,7 +49,12 @@ public class Highscore : MonoBehaviour {
 
         }
 
+<<<<<<< HEAD
 		PlayerPrefs.SetFloat("Highscore", highscore);
 		//deathMenu.ToggelEndMenu (highscor);
+=======
+		PlayerPrefs.SetFloat("Highscore", highscor);
+		deathMenu.ToggleEndMenu(highscor);
+>>>>>>> b3df240d132489a1b15789d816c0b422ec83ccb0
 	}
 }

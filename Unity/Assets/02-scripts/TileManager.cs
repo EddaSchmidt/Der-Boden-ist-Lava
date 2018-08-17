@@ -7,11 +7,11 @@ public class TileManager : MonoBehaviour {
     public GameObject[] tilePrefabs;
 
     private Transform playerTransform;
-    private float spawnZ = -6.0f; // wo in z achse soll bruecken teil hin
+    private float spawnZ = -6.0f; // wo in z achse soll erstes bruecken teil hin
     private float brueckelength = 3.0f;
-    private float safeZone = 15.0f;
-    private int amnTilesOnScreen = 10;
-    private int lastPrefabIndex = 0;
+    private float safeZone = 15.0f; 
+    private int amnTilesOnScreen = 20; //wie viele prefabs man aufm screen sehen soll
+    private int lastPrefabIndex = 0; //samit man nicht 2x hintereinander selben prefab hat
 
     private List<GameObject> activeTiles;
 
@@ -23,7 +23,7 @@ public class TileManager : MonoBehaviour {
         for (int i = 0; i<amnTilesOnScreen; i++)
         {
             // am anfang normale Brücke und danach random brücke
-            if (i<2 )
+            if (i<9 )
             {
                 SpawnTile(0);
             } else
@@ -35,11 +35,11 @@ public class TileManager : MonoBehaviour {
         }
     }
 	
-	// Update is called once per frame
 	void Update () {
+        //Infinity runner
 		if (playerTransform.position.z - safeZone > (spawnZ -amnTilesOnScreen* brueckelength))
         {
-            SpawnTile();
+            SpawnTile(); 
             DeleteTile();
         }
 	}
@@ -50,7 +50,6 @@ public class TileManager : MonoBehaviour {
         if (prefabIndex == -1)
         {
             go = Instantiate(tilePrefabs[RandomPrefabIndex()]) as GameObject;
-
         }
         else
         {
@@ -64,17 +63,17 @@ public class TileManager : MonoBehaviour {
 
     private void DeleteTile()
     {
-        Destroy(activeTiles[0]);
-        activeTiles.RemoveAt(0);
+        Destroy(activeTiles[0]); //letztes element loeschen
+        activeTiles.RemoveAt(0); //ebenfalls element aus liste loeschen
     }
 
-    private int RandomPrefabIndex()
+    private int RandomPrefabIndex() //random reihenfolge der prefabs
     {
-        if (tilePrefabs.Length <= 1)
+        if (tilePrefabs.Length <= 1) //wenn nur ein prefab in liste dann return 0
             return 0;
 
         int randomIndex = lastPrefabIndex;
-        while(randomIndex == lastPrefabIndex)
+        while(randomIndex == lastPrefabIndex) //damit man nicht 2x dasselbe prefab hat
         {
             randomIndex = Random.Range(0, tilePrefabs.Length);
         }
