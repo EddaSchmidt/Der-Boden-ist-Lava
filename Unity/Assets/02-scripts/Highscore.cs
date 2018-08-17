@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class Highscore : MonoBehaviour {
-	public float highscor = 0.0f;
+	public float highscore = 0.0f;
 	private int difficultyLevel = 1; 
 	private int maxDifficultylevel =  10;
 	private int highscoreToNextLevel = 10;
@@ -21,11 +21,11 @@ public class Highscore : MonoBehaviour {
 		if (isDead)
 			return;
 
-		if (highscor >= highscoreToNextLevel)
+		if (highscore >= highscoreToNextLevel)
 			LevelUp();
 
-		highscor += Time.deltaTime * difficultyLevel;
-		highscoreText.text = ((int)highscor).ToString();
+        highscore += Time.deltaTime * difficultyLevel;
+		highscoreText.text = ((int)highscore).ToString();
 	}
 
 	void LevelUp(){
@@ -45,12 +45,12 @@ public class Highscore : MonoBehaviour {
 	public void OnDeath(){
 
         isDead = true;
-        if(PlayerPrefs.GetFloat("Highscore") < highscor)
+        if(PlayerPrefs.GetFloat("Highscore") < highscore)
         {
 
         }
 
-		PlayerPrefs.SetFloat("Highscore", highscor);
+		PlayerPrefs.SetFloat("Highscore", highscore);
 		//deathMenu.ToggelEndMenu (highscor);
 	}
 }

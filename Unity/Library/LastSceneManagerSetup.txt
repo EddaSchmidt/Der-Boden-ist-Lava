@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/01-Scenes/ScriptAusweichSceneVonSamuelRiestererErstelltAm05-08-2018DamitGithubNichtWiederRumSpackt.unity
-=======
 - path: Assets/01-Scenes/Spiel.unity
->>>>>>> 5e9bc31e740c5104ad73036c0fa9e06e5ca782a9
   isLoaded: 1
   isActive: 1
