@@ -144,11 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 729575497}
-  startPos: {fileID: 1257828378}
-  endPos: {fileID: 1399446762}
-  repeatable: 1
-  speed: 7
-  lerpTime: 1
+  speed: 10
 --- !u!136 &729575499
 CapsuleCollider:
   m_ObjectHideFlags: 0

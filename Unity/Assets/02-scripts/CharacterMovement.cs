@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour {
 
     public GameObject player;
-
+    public float speed = 15f;
     private Vector3 newPosition;
 
     void Awake() {
@@ -17,18 +17,28 @@ public class CharacterMovement : MonoBehaviour {
     }
 
     void PositionChanging() {
-        Vector3 positionA = new Vector3(-5f, 3f, 0f);
-        Vector3 positionB = new Vector3(5f, 3f, 0f);
+        Vector3 positionA = player.transform.position + new Vector3(-1f, 0f, 0f);
+        Vector3 positionB = player.transform.position + new Vector3(1f, 0f, 0f);
+        Vector3 positionC = player.transform.position + new Vector3(0f, 0f, 1f);
+        Vector3 positionD = player.transform.position + new Vector3(0f, 0f, -1f);
 
         if (Input.GetKeyDown(KeyCode.A)) {
             newPosition = positionA;
         }
-        
+
         if (Input.GetKeyDown(KeyCode.D)) {
             newPosition = positionB;
         }
 
-        player.transform.position = newPosition;
+        if (Input.GetKeyDown(KeyCode.W)) {
+            newPosition = positionC;
+        }
+
+        if (Input.GetKeyDown(KeyCode.S)) {
+            newPosition = positionD;
+        }
+
+        player.transform.position = Vector3.Lerp(player.transform.position, newPosition, Time.deltaTime * speed);
     }
     
     
