@@ -5,6 +5,8 @@ using UnityEngine;
 public class EndlessTest : MonoBehaviour {
 
     public GameObject player;
+    public GameObject brick;
+    public GameObject brickWrong;
     public int[][] myArr = new int[200][];
     public Vector3 playerPosition;
 
@@ -17,8 +19,16 @@ public class EndlessTest : MonoBehaviour {
 		for (float i = 0; i < 200f; i++) {
             for (float j = 0; j < 5f; j++) {
 
-                
+
+
                 if (Random.Range(1f, 10f) > 3f) {
+                    Instantiate(brick, new Vector3(j, 0, i), Quaternion.identity);
+                } else {
+                    Instantiate(brickWrong, new Vector3(j, 0, i), Quaternion.identity);
+                }
+
+
+                /*if (Random.Range(1f, 10f) > 3f) {
                     GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
                     cube.transform.localScale = new Vector3(0.8f, 0.2f, 0.8f);
                     cube.transform.position = new Vector3(j, 0, i);
@@ -26,7 +36,7 @@ public class EndlessTest : MonoBehaviour {
                     GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
                     sphere.transform.localScale = new Vector3(0.8f, 0.2f, 0.8f);
                     sphere.transform.position = new Vector3(j, 0, i);
-                }
+                }*/
             }
         }
 	}
