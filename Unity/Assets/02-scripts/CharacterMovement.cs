@@ -6,13 +6,42 @@ public class CharacterMovement : MonoBehaviour {
 
     public GameObject player;
 
+    private Vector3 newPosition;
 
+    void Awake() {
+        newPosition = player.transform.position;
+    }
+
+    void Update() {
+        PositionChanging();
+    }
+
+    void PositionChanging() {
+        Vector3 positionA = new Vector3(-5f, 3f, 0f);
+        Vector3 positionB = new Vector3(5f, 3f, 0f);
+
+        if (Input.GetKeyDown(KeyCode.A)) {
+            newPosition = positionA;
+        }
+        
+        if (Input.GetKeyDown(KeyCode.D)) {
+            newPosition = positionB;
+        }
+
+        player.transform.position = newPosition;
+    }
+    
+    
+    
+    
+    
+    /*
     public IEnumerator Start () {
         if (Input.GetKeyDown(KeyCode.A)) {
             player.transform.position = Vector3.MoveTowards(player.transform.position, player.transform.position + Vector3.left * 2, 20f * Time.deltaTime);
         }
         yield return null;
-    }
+    }*/
 
     /*
     public Transform startPos;
