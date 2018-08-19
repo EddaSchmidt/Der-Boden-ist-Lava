@@ -45,7 +45,7 @@ public class PlayerMotor : MonoBehaviour {
 	void Update () {
 
         if (isDead) // wenn spieler tot dann nur return also spieler movement nicht mehr updaten
-            return;
+			speed=0;
 
         if (Time.time - startTime < animationDuration) { //damit der spieler sich nicht am anfang bewegt
             controller.Move (Vector3.forward * speed * Time.deltaTime);
