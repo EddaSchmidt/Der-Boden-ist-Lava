@@ -27,6 +27,7 @@ public class PlayerMotor : MonoBehaviour {
 
     private bool isDead = false;
 
+
     public Text sterntext;
     public float sternzaehler = 0f;
 
@@ -44,8 +45,12 @@ public class PlayerMotor : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (isDead) // wenn spieler tot dann nur return also spieler movement nicht mehr updaten
+        if (isDead)
+        { // wenn spieler tot dann nur return also spieler movement nicht mehr updaten
+            StartCoroutine(Wait(5.0f));
             return;
+        }
+
 
         if (Time.time - startTime < animationDuration) { //damit der spieler sich nicht am anfang bewegt
             controller.Move (Vector3.forward * speed * Time.deltaTime);
@@ -74,7 +79,8 @@ public class PlayerMotor : MonoBehaviour {
         controller.Move(moveVector * Time.deltaTime); //Spieler bewegen, Time.deltaTime damit er nicht so schnell lauft
 
         
-         if (transform.position.z > speedMilestoneCount){
+
+            if (transform.position.z > speedMilestoneCount){
             speedMilestoneCount+= speedIncreaseMilestone;
 			speedIncreaseMilestone = speedIncreaseMilestone * speedMultiplier;
             speed = speed + speedMultiplier;
@@ -92,8 +98,12 @@ public class PlayerMotor : MonoBehaviour {
             Death();
         }
 
-        
-	}
+    }
+    
+    IEnumerator Wait(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+    }
 
     //aufruf jedes mal wenn der Spieler etwas beruehrt
     private void OnControllerColliderHit(ControllerColliderHit hit) {
@@ -112,9 +122,9 @@ public class PlayerMotor : MonoBehaviour {
         GameObject obstacle = hit.collider.gameObject; //speichert das obstacle auf das der spieler trifft ind obstacle
          if (hit.gameObject.tag == "einbrechen")
         {
-           
+            
             brechen(obstacle); //uebergibt das getroffene obstacle an brechen()
-
+            isDead = true;
         }
         
     }
@@ -147,15 +157,15 @@ public class PlayerMotor : MonoBehaviour {
 
             teilchen.AddComponent<Rigidbody>();
             teilchen.GetComponent<Rigidbody>().mass = cubeGroesse;
-
             
-        }
+
+    }
         
     
 
     private void Death(){
 
-        isDead = true;
+        
         GetComponent<Highscore> ().OnDeath();
     }
 }
