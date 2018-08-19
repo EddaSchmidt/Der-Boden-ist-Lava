@@ -43,13 +43,23 @@ public class PlayerMotor : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+<<<<<<< HEAD
         
         if (isDead==true)
+=======
+
+<<<<<<< HEAD
+        if (isDead) // wenn spieler tot dann nur return also spieler movement nicht mehr updaten
+			speed=0;
+=======
+        if (isDead)
+>>>>>>> 506bd0abb31761e64d211225d8959efddecc94fd
         { // wenn spieler tot dann nur return also spieler movement nicht mehr updaten
             moveVector.x = 0;
             speed = 1;
         }
 
+>>>>>>> 6a6d5300adb3363c142c4c728acd1cd2bd506add
 
         if (Time.time - startTime < animationDuration) { //damit der spieler sich nicht am anfang bewegt
             controller.Move (Vector3.forward * speed * Time.deltaTime);
