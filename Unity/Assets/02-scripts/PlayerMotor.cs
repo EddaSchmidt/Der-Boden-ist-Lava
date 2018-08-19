@@ -12,7 +12,7 @@ public class PlayerMotor : MonoBehaviour {
     private float gravity = 12.0f;
 
 
-    private float speed; //= 5.0f; // Schnelligkeit festelgen auf 5m pro sekunde
+    public float speed; //= 5.0f; // Schnelligkeit festelgen auf 5m pro sekunde
 
     public float speedMultiplier;
     public float speedIncreaseMilestone;
@@ -43,8 +43,8 @@ public class PlayerMotor : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-        if (isDead)
+        
+        if (isDead==true)
         { // wenn spieler tot dann nur return also spieler movement nicht mehr updaten
             moveVector.x = 0;
             speed = 1;
