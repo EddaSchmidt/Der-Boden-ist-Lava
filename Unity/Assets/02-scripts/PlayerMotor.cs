@@ -67,7 +67,7 @@ public class PlayerMotor : MonoBehaviour {
         //X - Left and Right
         moveVector.x = Input.GetAxisRaw("Horizontal") * speed; //Spieler kann rechts und links gehen
         //Y - Up and Down
-        moveVector.y = verticalVelocity;
+        moveVector.y = verticalVelocity * Time.deltaTime;
         //Z - Foward and Backward
         moveVector.z = speed; 
 
@@ -156,6 +156,6 @@ public class PlayerMotor : MonoBehaviour {
     private void Death(){
 
         isDead = true;
-        GetComponent<Highscore> ().OnDeath();
+        //GetComponent<Highscore> ().OnDeath();
     }
 }

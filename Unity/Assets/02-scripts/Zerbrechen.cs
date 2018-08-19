@@ -51,6 +51,8 @@ public class Zerbrechen : MonoBehaviour {
 
         teilchen.AddComponent<Rigidbody>();
         teilchen.GetComponent<Rigidbody>().mass = cubeGroesse;
+
+       
     }
 
 }
