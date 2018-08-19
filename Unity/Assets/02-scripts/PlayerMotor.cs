@@ -67,7 +67,7 @@ public class PlayerMotor : MonoBehaviour {
         //X - Left and Right
         moveVector.x = Input.GetAxisRaw("Horizontal") * speed; //Spieler kann rechts und links gehen
         //Y - Up and Down
-        moveVector.y = verticalVelocity * Time.deltaTime;
+        moveVector.y = verticalVelocity;
         //Z - Foward and Backward
         moveVector.z = speed; 
 
