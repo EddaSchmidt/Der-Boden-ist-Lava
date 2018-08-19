@@ -9,15 +9,13 @@ public class PlayerMotor : MonoBehaviour {
     private CharacterController controller;
     private Vector3 moveVector;
     private float verticalVelocity = 0.0f;
-    private float gravity = 12.0f; 
+    private float gravity = 12.0f;
 
 
-    public float speed; // = 5.0f; // Schnelligkeit festelgen auf 5m pro sekunde
+    private float speed; //= 5.0f; // Schnelligkeit festelgen auf 5m pro sekunde
 
     public float speedMultiplier;
-
     public float speedIncreaseMilestone;
-
     private float speedMilestoneCount;
 
 
@@ -25,9 +23,9 @@ public class PlayerMotor : MonoBehaviour {
     private float animationDuration = 3.0f; //spieler darf in ersten 3 sek nicht bewegen
     private float startTime; // damit der spieler sich am anfang nicht bewegt
 
-    private bool isDead = false;
     Animator mAnimator;
-
+    private bool isDead = false;
+    
     public Text sterntext;
     public float sternzaehler = 0f;
 
@@ -81,8 +79,8 @@ public class PlayerMotor : MonoBehaviour {
 
         
 
-            if (transform.position.z > speedMilestoneCount){
-            speedMilestoneCount+= speedIncreaseMilestone;
+       if (transform.position.z > speedMilestoneCount) {
+            speedMilestoneCount += speedIncreaseMilestone;
 			speedIncreaseMilestone = speedIncreaseMilestone * speedMultiplier;
             speed = speed + speedMultiplier;
         }
