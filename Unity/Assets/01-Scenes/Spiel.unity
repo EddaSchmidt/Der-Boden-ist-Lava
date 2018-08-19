@@ -146,8 +146,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highscore: 0
-  highscoreText: {fileID: 1545153596}
-  deathMenu: {fileID: 1312265367}
+  highscoreText: {fileID: 0}
+  deathMenu: {fileID: 0}
 --- !u!143 &21569719
 CharacterController:
   m_ObjectHideFlags: 0
@@ -232,11 +232,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  speedMultiplier: 1.25
-  speedIncreaseMilestone: 50
-  sterntext: {fileID: 572420140}
+  speedMultiplier: 0
+  speedIncreaseMilestone: 0
+  sterntext: {fileID: 0}
   sternzaehler: 0
-  cubeGroesse: -0.2
+  cubeGroesse: 0.2
 --- !u!136 &21569724
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -705,7 +705,7 @@ MonoBehaviour:
   speedIncreaseMilestone: 50
   sterntext: {fileID: 572420140}
   sternzaehler: 0
-  cubeGroesse: -0.2
+  cubeGroesse: 0.2
 --- !u!136 &724135332
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1001,7 +1001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1ae75e04a3367749813fef31c652a8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 1358267258}
+  scoreText: {fileID: 0}
   BackgroundImg: {fileID: 0}
 --- !u!1 &1358267256
 GameObject:
@@ -1108,14 +1108,12 @@ MonoBehaviour:
   tilePrefabs:
   - {fileID: 1784440290864734, guid: 4e6bf528c8d737440be3b5992ce82ba3, type: 2}
   - {fileID: 1784440290864734, guid: 4e6bf528c8d737440be3b5992ce82ba3, type: 2}
-  - {fileID: 1784440290864734, guid: 4e6bf528c8d737440be3b5992ce82ba3, type: 2}
   - {fileID: 1750711367125604, guid: 2d76205005cdb254291305e87ff1e4d9, type: 2}
   - {fileID: 1431156600026730, guid: b7bbd3020c4e96d4bba5bf01c4338496, type: 2}
   - {fileID: 1381018503006224, guid: a60f45bff2dda294eada9c3b6a815af7, type: 2}
   - {fileID: 1243033190034102, guid: eed54c7210dd4d44cb60b8b14a83ec8a, type: 2}
   - {fileID: 1166779712005100, guid: c1feb92a9358f35419300ed0eb22476d, type: 2}
   - {fileID: 1487049707577072, guid: e607f9536b31f314a89ff4a2723f9353, type: 2}
-  - {fileID: 1784440290864734, guid: 4e6bf528c8d737440be3b5992ce82ba3, type: 2}
 --- !u!4 &1471823132
 Transform:
   m_ObjectHideFlags: 0
