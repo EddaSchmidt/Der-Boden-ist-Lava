@@ -156,6 +156,6 @@ public class PlayerMotor : MonoBehaviour {
     private void Death(){
 
         isDead = true;
-        //GetComponent<Highscore> ().OnDeath();
+        GetComponent<Highscore> ().OnDeath();
     }
 }
