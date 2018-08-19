@@ -9,15 +9,13 @@ public class PlayerMotor : MonoBehaviour {
     private CharacterController controller;
     private Vector3 moveVector;
     private float verticalVelocity = 0.0f;
-    private float gravity = 12.0f; 
+    private float gravity = 12.0f;
 
 
-    public float speed; // = 5.0f; // Schnelligkeit festelgen auf 5m pro sekunde
+    private float speed; //= 5.0f; // Schnelligkeit festelgen auf 5m pro sekunde
 
     public float speedMultiplier;
-
     public float speedIncreaseMilestone;
-
     private float speedMilestoneCount;
 
 
@@ -25,8 +23,9 @@ public class PlayerMotor : MonoBehaviour {
     private float animationDuration = 3.0f; //spieler darf in ersten 3 sek nicht bewegen
     private float startTime; // damit der spieler sich am anfang nicht bewegt
 
+    Animator mAnimator;
     private bool isDead = false;
-
+    
     public Text sterntext;
     public float sternzaehler = 0f;
 
@@ -38,14 +37,24 @@ public class PlayerMotor : MonoBehaviour {
     void Start () {
         controller = GetComponent<CharacterController>();
         startTime = Time.time;
-		speedMilestoneCount = speedIncreaseMilestone; 
+		speedMilestoneCount = speedIncreaseMilestone;
+        mAnimator = GetComponent<Animator>();
     }
 	
 	// Update is called once per frame
 	void Update () {
 
+<<<<<<< HEAD
         if (isDead) // wenn spieler tot dann nur return also spieler movement nicht mehr updaten
 			speed=0;
+=======
+        if (isDead)
+        { // wenn spieler tot dann nur return also spieler movement nicht mehr updaten
+            moveVector.x = 0;
+            speed = 1;
+        }
+
+>>>>>>> 6a6d5300adb3363c142c4c728acd1cd2bd506add
 
         if (Time.time - startTime < animationDuration) { //damit der spieler sich nicht am anfang bewegt
             controller.Move (Vector3.forward * speed * Time.deltaTime);
@@ -74,8 +83,9 @@ public class PlayerMotor : MonoBehaviour {
         controller.Move(moveVector * Time.deltaTime); //Spieler bewegen, Time.deltaTime damit er nicht so schnell lauft
 
         
-         if (transform.position.z > speedMilestoneCount){
-            speedMilestoneCount+= speedIncreaseMilestone;
+
+       if (transform.position.z > speedMilestoneCount) {
+            speedMilestoneCount += speedIncreaseMilestone;
 			speedIncreaseMilestone = speedIncreaseMilestone * speedMultiplier;
             speed = speed + speedMultiplier;
         }
@@ -92,8 +102,8 @@ public class PlayerMotor : MonoBehaviour {
             Death();
         }
 
-        
-	}
+    }
+    
 
     //aufruf jedes mal wenn der Spieler etwas beruehrt
     private void OnControllerColliderHit(ControllerColliderHit hit) {
@@ -112,9 +122,10 @@ public class PlayerMotor : MonoBehaviour {
         GameObject obstacle = hit.collider.gameObject; //speichert das obstacle auf das der spieler trifft ind obstacle
          if (hit.gameObject.tag == "einbrechen")
         {
-           
+            
             brechen(obstacle); //uebergibt das getroffene obstacle an brechen()
-
+            mAnimator.SetBool("dead", true);
+            isDead = true;
         }
         
     }
@@ -147,15 +158,15 @@ public class PlayerMotor : MonoBehaviour {
 
             teilchen.AddComponent<Rigidbody>();
             teilchen.GetComponent<Rigidbody>().mass = cubeGroesse;
-
             
-        }
+
+    }
         
     
 
     private void Death(){
 
-        isDead = true;
+        
         GetComponent<Highscore> ().OnDeath();
     }
 }
