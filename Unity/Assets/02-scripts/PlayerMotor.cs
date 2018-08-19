@@ -26,7 +26,7 @@ public class PlayerMotor : MonoBehaviour {
     private float startTime; // damit der spieler sich am anfang nicht bewegt
 
     private bool isDead = false;
-
+    Animator mAnimator;
 
     public Text sterntext;
     public float sternzaehler = 0f;
@@ -39,7 +39,8 @@ public class PlayerMotor : MonoBehaviour {
     void Start () {
         controller = GetComponent<CharacterController>();
         startTime = Time.time;
-		speedMilestoneCount = speedIncreaseMilestone; 
+		speedMilestoneCount = speedIncreaseMilestone;
+        mAnimator = GetComponent<Animator>();
     }
 	
 	// Update is called once per frame
@@ -47,8 +48,8 @@ public class PlayerMotor : MonoBehaviour {
 
         if (isDead)
         { // wenn spieler tot dann nur return also spieler movement nicht mehr updaten
-            StartCoroutine(Wait(5.0f));
-            return;
+            moveVector.x = 0;
+            speed = 1;
         }
 
 
@@ -100,10 +101,6 @@ public class PlayerMotor : MonoBehaviour {
 
     }
     
-    IEnumerator Wait(float waitTime)
-    {
-        yield return new WaitForSeconds(waitTime);
-    }
 
     //aufruf jedes mal wenn der Spieler etwas beruehrt
     private void OnControllerColliderHit(ControllerColliderHit hit) {
@@ -124,6 +121,7 @@ public class PlayerMotor : MonoBehaviour {
         {
             
             brechen(obstacle); //uebergibt das getroffene obstacle an brechen()
+            mAnimator.SetBool("dead", true);
             isDead = true;
         }
         
