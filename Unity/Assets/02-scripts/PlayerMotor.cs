@@ -73,13 +73,13 @@ public class PlayerMotor : MonoBehaviour {
 
         controller.Move(moveVector * Time.deltaTime); //Spieler bewegen, Time.deltaTime damit er nicht so schnell lauft
 
-
+        
          if (transform.position.z > speedMilestoneCount){
             speedMilestoneCount+= speedIncreaseMilestone;
 			speedIncreaseMilestone = speedIncreaseMilestone * speedMultiplier;
             speed = speed + speedMultiplier;
         }
-
+        
 
 
 
