@@ -6,53 +6,79 @@ public class Zerbrechen : MonoBehaviour {
 
     public float cubeGroesse = 0.2f;
     public int cubesTeile = 5;
-
+    GameObject lava;
+    public GameObject spieler;
 
 	// Use this for initialization
 	void Start () {
-		
+        //spieler = GameObject.FindGameObjectWithTag("spieler");
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        /*
+        lava = GameObject.FindGameObjectWithTag("einbrechen");
+        lava.GetComponent<Transform>();
+        Debug.Log(lava);
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.name == "spieler")
+
+        if (lava.transform.position.z == spieler.transform.position.z)
         {
-            brechen();
+            brechen(lava);
         }
+
+    */
+        FindClosestEnemy(); // der am naehsten ist explodiert
     }
 
-    public void brechen()
+    void FindClosestEnemy()
     {
-        //Obstacle verschwinden lassen
-        gameObject.SetActive(false);
+        GameObject[] gos;
+        gos = GameObject.FindGameObjectsWithTag("einbrechen");
+        GameObject closest = null;
+        float distance = Mathf.Infinity;
+        Vector3 position = transform.position;
+        foreach (GameObject go in gos)
+        {
+            Vector3 diff = go.transform.position - position;
+            float curDistance = diff.sqrMagnitude;
+            if (curDistance < distance)
+            {
+                closest = go;
+                distance = curDistance;
+            }
+        }
+         brechen(closest);
+    }
 
-        for (int x = 0; x < cubesTeile; x++) {
-            for (int y = 0; y < cubesTeile; y++) {
-                for (int z = 0; z < cubesTeile; z++) {
-                    createTeile(x, y, z);
+
+    public void brechen(GameObject obj)
+    {
+        for (int x = 0; x < 1; x++)
+        {
+            for (int y = 0; y < 1; y++)
+            {
+                for (int z = 0; z < 1; z++)
+                {
+                    createTeile(x, y, z, obj);
                 }
             }
         }
 
     }
 
-    void createTeile(int x, int y, int z)
+    void createTeile(int x, int y, int z, GameObject obj)
     {
         GameObject teilchen;
         teilchen = GameObject.CreatePrimitive(PrimitiveType.Cube);
 
-        teilchen.transform.position = transform.position + new Vector3(cubeGroesse * x, cubeGroesse * y, cubeGroesse * z);
+        teilchen.transform.position = obj.transform.position + new Vector3(cubeGroesse * x + 0.5f, cubeGroesse * y, cubeGroesse * z + 1.25f);
         teilchen.transform.localScale = new Vector3(cubeGroesse, cubeGroesse, cubeGroesse);
 
         teilchen.AddComponent<Rigidbody>();
         teilchen.GetComponent<Rigidbody>().mass = cubeGroesse;
 
-       
+
     }
 
 }

@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class PlayerMotor : MonoBehaviour {
 
-
     private CharacterController controller;
     private Vector3 moveVector;
     private float verticalVelocity = 0.0f;
@@ -46,10 +45,8 @@ public class PlayerMotor : MonoBehaviour {
 
         if (isDead) // wenn spieler tot dann nur return also spieler movement nicht mehr updaten
         { // wenn spieler tot dann nur return also spieler movement nicht mehr updaten
-            moveVector.x = 0;
-            speed = 1;
+            speed = 0;
         }
-
 
         if (Time.time - startTime < animationDuration) { //damit der spieler sich nicht am anfang bewegt
             controller.Move (Vector3.forward * speed * Time.deltaTime);
@@ -69,7 +66,7 @@ public class PlayerMotor : MonoBehaviour {
 
         //Vektoren jedes mal neu berechnen
         //X - Left and Right
-        moveVector.x = Input.GetAxisRaw("Horizontal") * speed; //Spieler kann rechts und links gehen
+        moveVector.x = Input.GetAxisRaw("Horizontal")* speed; //Spieler kann rechts und links gehen
         //Y - Up and Down
         moveVector.y = verticalVelocity;
         //Z - Foward and Backward
@@ -86,8 +83,6 @@ public class PlayerMotor : MonoBehaviour {
         }
         
 
-
-
         //STERNCHEN ANZEIGE
         sterntext.text = ((float)sternzaehler).ToString();
 
@@ -98,6 +93,8 @@ public class PlayerMotor : MonoBehaviour {
         }
 
     }
+
+    
     
 
     //aufruf jedes mal wenn der Spieler etwas beruehrt
@@ -128,13 +125,13 @@ public class PlayerMotor : MonoBehaviour {
     
     public void brechen(GameObject obj)
     {
-        obj.SetActive(false); //grosse Platte verschwinden 
+        //obj.SetActive(false); //grosse Platte verschwinden 
         
-        for (int x = 0; x < 9; x++)
+        for (int x = 0; x < 3; x++)
         {
             for (int y = 0; y < 1; y++)
             {
-                for (int z = 0; z < 15; z++)
+                for (int z = 0; z < 2; z++)
                 {
                     createTeile(x, y, z, obj);
                 }
@@ -159,9 +156,7 @@ public class PlayerMotor : MonoBehaviour {
         
     
 
-    private void Death(){
-
-        
+    private void Death() {
         GetComponent<Highscore> ().OnDeath();
     }
 }
