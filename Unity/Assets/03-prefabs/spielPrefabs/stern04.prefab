@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 114597464369075568}
   m_Layer: 0
   m_Name: Stern
-  m_TagString: Untagged
+  m_TagString: Stern
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

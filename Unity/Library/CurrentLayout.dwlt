@@ -42,10 +42,10 @@ MonoBehaviour:
     y: 30
     width: 1280
     height: 587
-  m_MinSize: {x: 683, y: 492}
+  m_MinSize: {x: 681, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 94
+  controlID: 81
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -89,8 +89,8 @@ MonoBehaviour:
     y: 0
     width: 248
     height: 316
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -143,7 +143,7 @@ MonoBehaviour:
     y: 0
     width: 1280
     height: 637
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -206,10 +206,10 @@ MonoBehaviour:
     y: 0
     width: 1003
     height: 587
-  m_MinSize: {x: 406, y: 492}
+  m_MinSize: {x: 404, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 95
+  controlID: 82
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -230,10 +230,10 @@ MonoBehaviour:
     y: 0
     width: 1003
     height: 316
-  m_MinSize: {x: 406, y: 221}
-  m_MaxSize: {x: 8006, y: 4021}
+  m_MinSize: {x: 404, y: 221}
+  m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 96
+  controlID: 83
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -329,14 +329,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/03-prefabs/spielPrefabs
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\Studi\4. Semester\GDV\Der-Boden-ist-Lava\Unity
+  m_LastProjectPath: C:\Users\Edda Schmidt\Documents\GitHub\Der-Boden-ist-Lava\Unity
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 39}
-    m_SelectedIDs: ec320000
-    m_LastClickedID: 13036
-    m_ExpandedIDs: 00000000d02b0000aa2d0000242e0000682e00003c300000e03200000234000004340000063400000834000000ca9a3b
+    m_SelectedIDs: 30470000
+    m_LastClickedID: 18224
+    m_ExpandedIDs: 00000000a84300008a440000a6440000c6440000cc45000028470000fc480000fe480000004900000249000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -364,7 +364,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d02b0000aa2d0000242e0000682e00003c300000503100009e320000e032000002340000043400000634000008340000
+    m_ExpandedIDs: 00000000a84300008a440000a6440000c6440000cc45000028470000fc480000fe4800000049000002490000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -480,9 +480,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 6c400000
-    m_LastClickedID: 16492
-    m_ExpandedIDs: 0aeefeff1691ffffe2a6ffff22aeffff06ebfffffef3ffff00000000
+    m_SelectedIDs: 66370000
+    m_LastClickedID: 0
+    m_ExpandedIDs: a27fffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -569,7 +569,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.14943594, y: 0.0059328326, z: -0.00089660066, w: -0.98875326}
     speed: 2
-    m_Value: {x: -0.14943594, y: 0.0059328326, z: -0.00089660066, w: -0.98875326}
+    m_Value: {x: -0.14943594, y: 0.0059328326, z: -0.0008966007, w: -0.98875326}
   m_Size:
     m_Target: 22.442442
     speed: 2
