@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class PlayerMotor : MonoBehaviour {
 
+    public GameObject player;
+
     private CharacterController controller;
     private Vector3 moveVector;
     private float verticalVelocity = 0.0f;
@@ -26,20 +28,28 @@ public class PlayerMotor : MonoBehaviour {
     private bool isDead = false;
     
     public Text sterntext;
-    public float sternzaehler = 100f;
+    public float sternzaehler;
 
     public float cubeGroesse = 0.2f;
 
     public float delay = 3f;
     private float countdown;
 
+    public void Death() {
+        // highscore.OnDeath();
+    }
+
+    // public Highscore highscore = player.GetComponent<Highscore>();
+
     // Use this for initialization
     void Start () {
+
         controller = GetComponent<CharacterController>();
         startTime = Time.time;
 		speedMilestoneCount = speedIncreaseMilestone;
         mAnimator = GetComponent<Animator>();
 
+        sternzaehler = 100f;
         countdown = delay;
 
         
@@ -170,7 +180,5 @@ public class PlayerMotor : MonoBehaviour {
         
     
 
-    private void Death() {
-        GetComponent<Highscore> ().OnDeath();
-    }
+    
 }
