@@ -9,7 +9,7 @@ public class TileManager : MonoBehaviour {
     private Transform playerTransform;
     private float spawnZ = -6.0f; // wo in z achse soll erstes bruecken teil hin
     private float brueckelength = 2.0f;
-    private float safeZone = 15.0f; 
+    private float safeZone = 15.0f; //erstmal keine Effekte damit der spieler anlaufen kann
     private int amnTilesOnScreen = 20; //wie viele prefabs man aufm screen sehen soll
     private int lastPrefabIndex = 0; //samit man nicht 2x hintereinander selben prefab hat
 

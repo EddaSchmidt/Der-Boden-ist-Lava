@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -62,9 +62,7 @@ public class moveorb : MonoBehaviour {
 	// Wenn der Spieler ein Obstacle beruehrt dann wird tot auf true gesetzt und der spieler laeuft nicht weiter 
 	void OnCollisionEnter(Collision other){
 		if(other.gameObject.name == "Obstacle"){
-            tot = true;   
-           
-           
+            tot = true;
 
         }
         //wenn der spieler ein stern sammelt wird der sternenzaehler einen hochh gesetzt

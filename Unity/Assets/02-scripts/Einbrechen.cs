@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -29,7 +29,7 @@ public class Einbrechen : MonoBehaviour {
             rigidPlatte.isKinematic = false;
             eingebrochen = true;
             //Instantiate(remains, transform.position, transform.rotation);
-            Destroy(gameObject);
+            //Destroy(gameObject);
             
 
 
