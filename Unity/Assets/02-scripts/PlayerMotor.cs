@@ -26,7 +26,7 @@ public class PlayerMotor : MonoBehaviour {
     private bool isDead = false;
     
     public Text sterntext;
-    public float sternzaehler = 0f;
+    public float sternzaehler = 100f;
 
     public float cubeGroesse = 0.2f;
 
@@ -92,7 +92,11 @@ public class PlayerMotor : MonoBehaviour {
             speed = speed + speedMultiplier;
         }
         
+        sternzaehler -= 0.2f; // die zahl des Wassers was der kaktus hat wird immer weniger, er muss flaschen sammeln damit er nicht stirbt
 
+        if(sternzaehler == 0f){
+            Death();
+        }
         //STERNCHEN ANZEIGE
         sterntext.text = ((float)sternzaehler).ToString();
        
@@ -109,7 +113,7 @@ public class PlayerMotor : MonoBehaviour {
         //STERN
          if (hit.gameObject.tag == "Stern")
         {
-            sternzaehler++;
+            sternzaehler += 10;
             //Stern verschwindet
             Destroy(hit.gameObject);
             Debug.Log(sternzaehler);
