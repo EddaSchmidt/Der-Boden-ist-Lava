@@ -69,8 +69,16 @@
      <Compile Include="Assets\02-scripts\TileManager.cs" />
      <Compile Include="Assets\02-scripts\Zerbrechen.cs" />
      <None Include="Assets\read me.txt" />
+<<<<<<< HEAD
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/Edda Schmidt/Documents/GitHub/Der-Boden-ist-Lava/Unity/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+=======
+ <Reference Include="UnityEngine.UIAutomation">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TestRunner">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+>>>>>>> 48e7757248c9c400185e9f99fc9e6620d2e76ca2
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/Edda Schmidt/Documents/GitHub/Der-Boden-ist-Lava/Unity/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
