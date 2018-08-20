@@ -237,6 +237,7 @@ MonoBehaviour:
   sterntext: {fileID: 0}
   sternzaehler: 0
   cubeGroesse: 0.2
+  delay: 3
 --- !u!136 &21569724
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -706,6 +707,7 @@ MonoBehaviour:
   sterntext: {fileID: 572420140}
   sternzaehler: 0
   cubeGroesse: 0.2
+  delay: 3
 --- !u!136 &724135332
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -742,7 +744,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 724135327}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96ef85cf88fab0c4580da1b64565a7b4, type: 3}
   m_Name: 
@@ -1121,7 +1123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePrefabs:
   - {fileID: 1455286119920978, guid: f46482932487fd14c983f718d8ed6d95, type: 2}
-  - {fileID: 1260812143810170, guid: 650268b782dac1542b10f43b393d3815, type: 2}
+  - {fileID: 1560055455705678, guid: c8b564b713a4fdb4b836b8b0d4949105, type: 2}
   - {fileID: 1376280743733728, guid: dc7330fcb5d41b54d8e0ae379173b0b8, type: 2}
   - {fileID: 1851508076138554, guid: 76a53d6395522414c81bc1f84a7cafe2, type: 2}
 --- !u!4 &1471823132

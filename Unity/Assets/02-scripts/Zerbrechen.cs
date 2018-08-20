@@ -6,7 +6,7 @@ public class Zerbrechen : MonoBehaviour {
 
     public float cubeGroesse = 0.2f;
     public int cubesTeile = 5;
-    GameObject lava;
+    GameObject fon;
     public GameObject spieler;
 
 	// Use this for initialization
@@ -16,6 +16,8 @@ public class Zerbrechen : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        fon = GameObject.FindGameObjectWithTag("fountain");
+        fon.SetActive(false);
         /*
         lava = GameObject.FindGameObjectWithTag("einbrechen");
         lava.GetComponent<Transform>();
@@ -54,31 +56,12 @@ public class Zerbrechen : MonoBehaviour {
 
     public void brechen(GameObject obj)
     {
-        for (int x = 0; x < 1; x++)
-        {
-            for (int y = 0; y < 1; y++)
-            {
-                for (int z = 0; z < 1; z++)
-                {
-                    createTeile(x, y, z, obj);
-                }
-            }
-        }
-
-    }
-
-    void createTeile(int x, int y, int z, GameObject obj)
-    {
-        GameObject teilchen;
-        teilchen = GameObject.CreatePrimitive(PrimitiveType.Cube);
-
-        teilchen.transform.position = obj.transform.position + new Vector3(cubeGroesse * x + 0.5f, cubeGroesse * y, cubeGroesse * z + 1.25f);
-        teilchen.transform.localScale = new Vector3(cubeGroesse, cubeGroesse, cubeGroesse);
-
-        teilchen.AddComponent<Rigidbody>();
-        teilchen.GetComponent<Rigidbody>().mass = cubeGroesse;
+        obj.SetActive(false);
+        fon.SetActive(true);
 
 
     }
+
+
 
 }

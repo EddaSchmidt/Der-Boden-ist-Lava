@@ -30,6 +30,8 @@ public class PlayerMotor : MonoBehaviour {
 
     public float cubeGroesse = 0.2f;
 
+    public float delay = 3f;
+    private float countdown;
 
 
     // Use this for initialization
@@ -38,14 +40,21 @@ public class PlayerMotor : MonoBehaviour {
         startTime = Time.time;
 		speedMilestoneCount = speedIncreaseMilestone;
         mAnimator = GetComponent<Animator>();
+
+        countdown = delay;
     }
 	
 	// Update is called once per frame
 	void Update () {
 
-        if (isDead) // wenn spieler tot dann nur return also spieler movement nicht mehr updaten
-        { // wenn spieler tot dann nur return also spieler movement nicht mehr updaten
-            speed = 0;
+        if (isDead)
+        {
+            countdown -= Time.deltaTime;
+            if (countdown <= 0)
+            {
+                Death(); // wenn spieler tot ist kommt nach 3 sekunden das death menu
+            }
+            return;
         }
 
         if (Time.time - startTime < animationDuration) { //damit der spieler sich nicht am anfang bewegt
@@ -85,12 +94,8 @@ public class PlayerMotor : MonoBehaviour {
 
         //STERNCHEN ANZEIGE
         sterntext.text = ((float)sternzaehler).ToString();
-
-        //wenn spieler runterfällt soll deathmenu aufgerufen werden
-        if (controller.transform.position.y < -15)
-        {
-            Death();
-        }
+       
+        
 
     }
 
@@ -114,8 +119,10 @@ public class PlayerMotor : MonoBehaviour {
         GameObject obstacle = hit.collider.gameObject; //speichert das obstacle auf das der spieler trifft ind obstacle
          if (hit.gameObject.tag == "einbrechen")
         {
-            
-            brechen(obstacle); //uebergibt das getroffene obstacle an brechen()
+
+            //brechen(obstacle); //uebergibt das getroffene obstacle an brechen()
+            obstacle.SetActive(false);
+
             mAnimator.SetBool("dead", true);
             isDead = true;
         }
@@ -125,11 +132,11 @@ public class PlayerMotor : MonoBehaviour {
     
     public void brechen(GameObject obj)
     {
-        //obj.SetActive(false); //grosse Platte verschwinden 
+        //obj.SetActive(false); //grosse Platte verschwinden, das machen e´bei einbrechen
         
-        for (int x = 0; x < 3; x++)
+        for (int x = 0; x < 2; x++)
         {
-            for (int y = 0; y < 1; y++)
+            for (int y = 0; y < 5; y++)
             {
                 for (int z = 0; z < 2; z++)
                 {
@@ -138,14 +145,15 @@ public class PlayerMotor : MonoBehaviour {
             }
         }
 
+        //obj.SetActive(false); //grosse Platte verschwinden
     }
-    
-        void createTeile(int x, int y, int z, GameObject obj)
+
+    void createTeile(int x, int y, int z, GameObject obj)
         {
             GameObject teilchen;
-            teilchen = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            teilchen = GameObject.CreatePrimitive(PrimitiveType.Sphere);
 
-            teilchen.transform.position = obj.transform.position + new Vector3(cubeGroesse * x+0.5f, cubeGroesse*y , cubeGroesse * z+ 1.25f);
+            teilchen.transform.position = obj.transform.position + new Vector3(cubeGroesse * x, cubeGroesse*y , cubeGroesse * z);
             teilchen.transform.localScale = new Vector3(cubeGroesse, cubeGroesse, cubeGroesse);
 
             teilchen.AddComponent<Rigidbody>();
