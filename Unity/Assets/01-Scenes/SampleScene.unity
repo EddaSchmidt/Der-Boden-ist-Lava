@@ -5982,6 +5982,52 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4110981406277528, guid: 6ffff1f7eb9ec944196f5a1447aeafb8, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110981406277528, guid: 6ffff1f7eb9ec944196f5a1447aeafb8, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110981406277528, guid: 6ffff1f7eb9ec944196f5a1447aeafb8, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 136770625540604038, guid: 6ffff1f7eb9ec944196f5a1447aeafb8,
+        type: 2}
+      propertyPath: m_Radius
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 136770625540604038, guid: 6ffff1f7eb9ec944196f5a1447aeafb8,
+        type: 2}
+      propertyPath: m_Height
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ffff1f7eb9ec944196f5a1447aeafb8, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &2098252954 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1571041701402120, guid: 6ffff1f7eb9ec944196f5a1447aeafb8,
+    type: 2}
+  m_PrefabInternal: {fileID: 2098252953}
+--- !u!131 &2098252955
+GUITexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2098252954}
+  m_Enabled: 1
+  m_Texture: {fileID: 2800000, guid: c4c9da84e501e384cbf8af88e1ff5e99, type: 3}
+  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
+  m_PixelInset:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  m_LeftBorder: 0
+  m_RightBorder: 0
+  m_TopBorder: 0
+  m_BottomBorder: 0
