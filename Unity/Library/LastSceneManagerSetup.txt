@@ -1,4 +1,12 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/01-Scenes/Spiel.unity
+=======
+<<<<<<< HEAD
+- path: Assets/01-Scenes/Spiel.unity
+=======
+- path: Assets/01-Scenes/lava.unity
+>>>>>>> 48e7757248c9c400185e9f99fc9e6620d2e76ca2
+>>>>>>> 5f6eba6fc2dc884d5b0fe0dd532e08018ce1e7ff
   isLoaded: 1
   isActive: 1
