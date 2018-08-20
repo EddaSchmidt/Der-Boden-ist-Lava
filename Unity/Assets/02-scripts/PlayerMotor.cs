@@ -33,7 +33,6 @@ public class PlayerMotor : MonoBehaviour {
     public float delay = 3f;
     private float countdown;
 
-
     // Use this for initialization
     void Start () {
         controller = GetComponent<CharacterController>();
@@ -42,6 +41,8 @@ public class PlayerMotor : MonoBehaviour {
         mAnimator = GetComponent<Animator>();
 
         countdown = delay;
+
+        
     }
 	
 	// Update is called once per frame
@@ -122,6 +123,7 @@ public class PlayerMotor : MonoBehaviour {
 
             //brechen(obstacle); //uebergibt das getroffene obstacle an brechen()
             obstacle.SetActive(false);
+            
 
             mAnimator.SetBool("dead", true);
             isDead = true;
