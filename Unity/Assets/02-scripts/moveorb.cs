@@ -15,12 +15,9 @@ public class moveorb : MonoBehaviour {
 		public int count;
 		public Text countText;
 		public Text winText;
-
-
-        Rigidbody rbSpieler;
         public bool tot = false; //testen ob Spieler noch lebt oder nicht
-        
- 
+    
+        Rigidbody rbSpieler;
 
     // Use this for initialization
     void Start () {
@@ -33,17 +30,14 @@ public class moveorb : MonoBehaviour {
 	void Update () {
 
         //wenn Spieler eingebrochen/tot dann faellt er runter und laeuft nicht weiter
-        if (tot == false)
-        {
+        if (tot == false) {
             GetComponent<Rigidbody>().velocity = new Vector3(horizVel, 0, 4);
-        } else
-        {
-            
+        } else {            
             rbSpieler.useGravity = true;
         }
 
         //Steuerung des Spielers mittels Tastatur (nach Links)
-		if((Input.GetKeyDown (moveL)) && (laneNum>-2) && (controlLock == "n")){
+		if((Input.GetKeyDown (moveL)) && (laneNum>-2) && (controlLock == "n")) {
 			horizVel = -2;
 			StartCoroutine (stopSlide());
 			laneNum -= 1;
@@ -81,7 +75,6 @@ public class moveorb : MonoBehaviour {
             winText.text = "You Win!";
         }
     }*/
-
 
 	//Nach einer halben sekunde wird der controllock wieder gelöst
 	//Nach einer halben sekunde wird die bewegung gestoppt

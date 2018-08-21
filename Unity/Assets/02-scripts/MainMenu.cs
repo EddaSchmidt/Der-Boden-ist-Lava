@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
 
-
 	public Text highscoreText;
 
 	// Use this for initialization
