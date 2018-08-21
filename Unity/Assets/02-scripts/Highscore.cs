@@ -52,9 +52,10 @@ public class Highscore : MonoBehaviour {
 
         }
 
-    
+        /*
         PlayerPrefs.SetFloat("Highscore", highscore);
         //deathMenu.ToggleEndMenu (highscore);
+        */
         
         PlayerPrefs.SetFloat("Highscore", highscore);
         deathMenu.ToggleEndMenu(this.highscore);

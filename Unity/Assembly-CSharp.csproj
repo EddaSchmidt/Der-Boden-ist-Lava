@@ -68,7 +68,16 @@
      <Compile Include="Assets\02-scripts\PlayerMotor.cs" />
      <Compile Include="Assets\02-scripts\TileManager.cs" />
      <Compile Include="Assets\02-scripts\Zerbrechen.cs" />
+     <Compile Include="Assets\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
+     <Compile Include="Assets\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
+     <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
+     <Compile Include="Assets\EffectExamples\Shared\Scripts\GunShoot.cs" />
+     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleCollision.cs" />
+     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
+     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
+     <None Include="Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
      <None Include="Assets\read me.txt" />
+     <None Include="Assets\04-materials\Hand painted bottle\readme.txt" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/Edda Schmidt/Documents/GitHub/Der-Boden-ist-Lava/Unity/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
