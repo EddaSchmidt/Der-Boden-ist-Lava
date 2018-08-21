@@ -115,7 +115,7 @@ public class PlayerMotor : MonoBehaviour {
             myHighscore.OnDeath();
         }
         //STERNCHEN ANZEIGE
-        sterntext.text = ((float)sternzaehler).ToString();
+        sterntext.text = ((int)sternzaehler).ToString();
        
         
 
