@@ -25,11 +25,11 @@ public class DeathMenu : MonoBehaviour {
 		BackgroundImg.color = Color.Lerp (new Color (0,0,0,0), Color.black, transition); //bissel durchsichtig
 	}
 
-	/*public void ToggleEndMenu(float score){
+	public void ToggleEndMenu(float score){
 		gameObject.SetActive(true); //man sieht death menu wenn tot
 		scoreText.text = ((int)score).ToString (); 
 		isShowned = true;
-	}*/
+	}
 
 	public void Restart() {
         //fuer play button das er wieder startet

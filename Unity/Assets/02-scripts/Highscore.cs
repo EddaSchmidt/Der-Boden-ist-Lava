@@ -12,10 +12,12 @@ public class Highscore : MonoBehaviour {
 
     public Text highscoreText;
 
-    public GameObject player;
-   // private DeathMenu deathMenu = player.GetComponent<DeathMenu>();
+    public DeathMenu deathMenu;
 
 
+    public void Start() {
+        
+    }
     //Update is calles once per frame
 
     void Update() {
@@ -55,7 +57,7 @@ public class Highscore : MonoBehaviour {
         //deathMenu.ToggleEndMenu (highscore);
         
         PlayerPrefs.SetFloat("Highscore", highscore);
-        //deathMenu.ToggleEndMenu(highscore);
+        deathMenu.ToggleEndMenu(this.highscore);
         
     }
 }

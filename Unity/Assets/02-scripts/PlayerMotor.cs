@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerMotor : MonoBehaviour {
 
-    public GameObject player;
+    public Transform player;
 
     private CharacterController controller;
     private Vector3 moveVector;
@@ -18,6 +18,10 @@ public class PlayerMotor : MonoBehaviour {
     public float speedMultiplier;
     public float speedIncreaseMilestone;
     private float speedMilestoneCount;
+
+    // Horizontale Bewegung
+    private Vector3 playerPos;
+    public float horizontalSpeed = 2f;
 
 
 
@@ -35,11 +39,7 @@ public class PlayerMotor : MonoBehaviour {
     public float delay = 3f;
     private float countdown;
 
-    public void Death() {
-        // highscore.OnDeath();
-    }
-
-    // public Highscore highscore = player.GetComponent<Highscore>();
+    public Highscore myHighscore;
 
     // Use this for initialization
     void Start () {
@@ -52,7 +52,7 @@ public class PlayerMotor : MonoBehaviour {
         sternzaehler = 100f;
         countdown = delay;
 
-        
+        //highScore = player.GetComponent<Highscore>();
     }
 	
 	// Update is called once per frame
@@ -63,7 +63,7 @@ public class PlayerMotor : MonoBehaviour {
             countdown -= Time.deltaTime;
             if (countdown <= 0)
             {
-                Death(); // wenn spieler tot ist kommt nach 3 sekunden das death menu
+                myHighscore.OnDeath(); // wenn spieler tot ist kommt nach 3 sekunden das death menu
             }
             return;
         }
@@ -83,20 +83,27 @@ public class PlayerMotor : MonoBehaviour {
             verticalVelocity -= gravity * Time.deltaTime;
         }
 
+        // Bewegung Horizontal
+        if (Input.GetKeyDown(KeyCode.A)) {
+            player.transform.position = Vector3.Lerp(player.transform.position, player.transform.position + new Vector3(-1f, 0, 0), horizontalSpeed * Time.deltaTime);
+        }
+        if (Input.GetKeyDown(KeyCode.D)) {
+            player.transform.position = Vector3.Lerp(player.transform.position, player.transform.position + new Vector3(1f, 0, 0), horizontalSpeed * Time.deltaTime);
+        }
 
         //Vektoren jedes mal neu berechnen
         //X - Left and Right
-        moveVector.x = Input.GetAxisRaw("Horizontal")* speed; //Spieler kann rechts und links gehen
+        //moveVector.x = Input.GetAxisRaw("Horizontal")* speed; //Spieler kann rechts und links gehen
         //Y - Up and Down
         moveVector.y = verticalVelocity;
         //Z - Foward and Backward
         moveVector.z = speed; 
 
         controller.Move(moveVector * Time.deltaTime); //Spieler bewegen, Time.deltaTime damit er nicht so schnell lauft
+        //PositionChanging();
 
-        
 
-       if (transform.position.z > speedMilestoneCount) {
+        if (transform.position.z > speedMilestoneCount) {
             speedMilestoneCount += speedIncreaseMilestone;
 			speedIncreaseMilestone = speedIncreaseMilestone * speedMultiplier;
             speed = speed + speedMultiplier;
@@ -104,8 +111,8 @@ public class PlayerMotor : MonoBehaviour {
         
         sternzaehler -= 0.2f; // die zahl des Wassers was der kaktus hat wird immer weniger, er muss flaschen sammeln damit er nicht stirbt
 
-        if(sternzaehler == 0f){
-            Death();
+        if(sternzaehler <= 0f){
+            myHighscore.OnDeath();
         }
         //STERNCHEN ANZEIGE
         sterntext.text = ((float)sternzaehler).ToString();
@@ -114,8 +121,7 @@ public class PlayerMotor : MonoBehaviour {
 
     }
 
-    
-    
+
 
     //aufruf jedes mal wenn der Spieler etwas beruehrt
     private void OnControllerColliderHit(ControllerColliderHit hit) {
@@ -177,8 +183,48 @@ public class PlayerMotor : MonoBehaviour {
             
 
     }
-        
-    
 
-    
+
+    public void Death() {
+        //myHighscore.OnDeath();
+    }
+
+
+
+
+
+    /* IEnumerator MoveFromTo(Transform thisPlayer, Vector3 a, Vector3 b, float horizontalSpeed) {
+       float step = (horizontalSpeed / (a - b).magnitude) * Time.fixedDeltaTime;
+       float t = 0;
+       while (t <= 1.0f) {
+           t += step;
+           thisPlayer.position = Vector3.Lerp(a, b, t); 
+           yield return new WaitForFixedUpdate();         
+       }
+       thisPlayer.position = b;
+   }*/
+
+
+    /*
+    void Awake() {
+        newPosition = player.transform.position;
+    }
+
+    void PositionChanging() {
+        Vector3 positionA = player.transform.position + new Vector3(-1f, 0f, 0f);
+        Vector3 positionB = player.transform.position + new Vector3(1f, 0f, 0f);
+
+
+        if (Input.GetKeyDown(KeyCode.A)) {
+            newPosition = positionA;
+        }
+
+        if (Input.GetKeyDown(KeyCode.D)) {
+            newPosition = positionB;
+        }
+
+        player.transform.position = Vector3.Lerp(player.transform.position, newPosition, Time.deltaTime * speed);
+    }
+    */
+
 }
