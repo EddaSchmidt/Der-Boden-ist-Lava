@@ -6,8 +6,8 @@ public class Zerbrechen : MonoBehaviour {
 
     public float cubeGroesse = 0.2f;
     public int cubesTeile = 5;
-    GameObject fon;
     public GameObject spieler;
+    GameObject fon;
 
 	// Use this for initialization
 	void Start () {
@@ -24,8 +24,7 @@ public class Zerbrechen : MonoBehaviour {
         Debug.Log(lava);
 
 
-        if (lava.transform.position.z == spieler.transform.position.z)
-        {
+        if (lava.transform.position.z == spieler.transform.position.z) {
             brechen(lava);
         }
 
@@ -33,19 +32,16 @@ public class Zerbrechen : MonoBehaviour {
         FindClosestEnemy(); // der am naehsten ist explodiert
     }
 
-    void FindClosestEnemy()
-    {
+    void FindClosestEnemy() {
         GameObject[] gos;
         gos = GameObject.FindGameObjectsWithTag("einbrechen");
         GameObject closest = null;
         float distance = Mathf.Infinity;
         Vector3 position = transform.position;
-        foreach (GameObject go in gos)
-        {
+        foreach (GameObject go in gos) {
             Vector3 diff = go.transform.position - position;
             float curDistance = diff.sqrMagnitude;
-            if (curDistance < distance)
-            {
+            if (curDistance < distance) {
                 closest = go;
                 distance = curDistance;
             }
@@ -53,15 +49,8 @@ public class Zerbrechen : MonoBehaviour {
          brechen(closest);
     }
 
-
-    public void brechen(GameObject obj)
-    {
+    public void brechen(GameObject obj) {
         obj.SetActive(false);
         fon.SetActive(true);
-
-
     }
-
-
-
 }

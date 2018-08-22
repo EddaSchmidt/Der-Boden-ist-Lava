@@ -3,27 +3,21 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class Highscore : MonoBehaviour {
+
     public float highscore = 0.0f;
+    public Text highscoreText;
+    public DeathMenu deathMenu;
+
     private int difficultyLevel = 1;
     private int maxDifficultylevel = 10;
     private int highscoreToNextLevel = 10;
 
     private bool isDead = false;
 
-    public Text highscoreText;
-
-    public DeathMenu deathMenu;
-
-
-    public void Start() {
-        
-    }
     //Update is calles once per frame
-
     void Update() {
 
-        if (isDead)
-            return;
+        if (isDead) return;
 
         if (highscore >= highscoreToNextLevel)
             LevelUp();
