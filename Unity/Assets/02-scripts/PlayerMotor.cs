@@ -25,7 +25,7 @@ public class PlayerMotor : MonoBehaviour {
     private float startTime; // damit der spieler sich am anfang nicht bewegt
 
     Animator mAnimator;
-    private bool isDead = false;
+    public bool isDead = false;
     
     public Text sterntext;
     public float sternzaehler;
@@ -41,6 +41,8 @@ public class PlayerMotor : MonoBehaviour {
     public bool verbrannt = false;
 
     public Text todesursache; //public Highscore myHighscore;
+
+    public int eingesammelt = 0;
 
     // Use this for initialization
     void Start () {
@@ -138,6 +140,7 @@ public class PlayerMotor : MonoBehaviour {
          if (hit.gameObject.tag == "Stern")
         {
             sternzaehler += 10;
+            eingesammelt++;
             //Stern verschwindet
             Destroy(hit.gameObject);
             Debug.Log(sternzaehler);
